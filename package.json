@@ -12,7 +12,8 @@
     "build:css": "cross-env NODE_ENV=production node tooling/build.css.js",
     "build": "cross-env NODE_ENV=production node tooling/build.js",
     "watch:html": "npx @11ty/eleventy --config=.eleventy.cjs --serve",
-    "watch": "node tooling/dev.js"
+    "watch": "node tooling/dev.js",
+    "resize-images": "node tooling/images.js"
   },
   "repository": {
     "type": "git",
@@ -31,10 +32,12 @@
     "cssnano": "^4.1.10",
     "esbuild": "^0.8.28",
     "html-minifier": "^4.0.0",
+    "p-all": "^3.0.0",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.0",
     "postcss-nesting": "^7.0.1",
+    "sharp": "^0.28.2",
     "tailwindcss": "^2.0.2"
   }
 }
