@@ -58,10 +58,9 @@ meta_description: Some description here
         {% endif %}
 <!-- end scripts -->
     </head>
-    <body class="preload page-{{pagename}}">
+    <body class="preload {% if templatename %} template-{{templatename}} {% endif %} page-{{pagename}}">
+        {% include "_page-header.njk" %}
         {{content | safe}}
-        <script>
-            document.body.classList.remove("preload");
-        </script>
+        {% include "_page-footer.njk" %}
     </body>
 </html>

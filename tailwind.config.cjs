@@ -11,12 +11,32 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'small': '640px',
-        'medium': '1024px',
-        'large': '1280px'
+        'sm': '640px',
+        'md': '768px',
+        'xmed': '900px',
+        'lg': '1024px',
+        'mar-tablet': '1200px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        'mar-desktop': '2600px'
       },
       colors: {
-        'rose': colors.rose
+        'rose': colors.rose,
+        'jou-main-1': '#1B3A5C',
+        'jou-main': '#354656',
+        'white': '#fff'
+      },
+      maxWidth: {
+        'mar-desktop': '2560px'
+      },
+      borderWidth: {
+        '1': '1px',
+      },
+      width: {
+        '5.5': '1.375rem'
+      },
+      fontFamily: {
+        'serif': ['Adobe Garamond Pro', 'serif']
       }
     },
   },
