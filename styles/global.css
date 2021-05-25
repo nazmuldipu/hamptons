@@ -17,6 +17,14 @@
         font-style: normal;
         unicode-range: U+000-5FF;
     }
+    @font-face {
+        font-display: swap;
+        font-family: 'Hijrnotes';
+        src: url('../fonts/Hijrnotes.ttf');
+        font-weight: 400;
+        font-style: normal;
+        unicode-range: U+000-5FF;
+    }
 }
 
 /****  start base classes  ********************************/
@@ -98,6 +106,31 @@ body {
     }
 }
 
+.reserve-btn {
+    @apply w-24;
+    @apply h-24;
+    @apply border-4;
+    @apply border-jou-main;
+    @apply p-1.5;
+    @apply rounded-full;
+    @apply fixed;
+    @apply top-3/4;
+    @apply right-3.5;
+    @apply block;
+}
+
+.reserve-btn > span {
+    @apply bg-jou-main;
+    @apply w-full;
+    @apply h-full;
+    @apply flex;
+    @apply rounded-full;
+    @apply text-white;
+    @apply items-center;
+    @apply justify-center;
+    @apply text-base;
+}
+
 /****  end page-header  ********************************/
 
 
@@ -108,10 +141,14 @@ body {
     @apply text-center;
 }
 .segment-inner {
-    @apply max-w-mar-desktop;
+    @apply max-w-jou-desktop;
     @apply overflow-hidden;
     @apply mx-auto;
     @apply text-left;
+}
+
+.font-hijrnotes {
+    @apply font-hijr;
 }
 
 /****  end page-content  ********************************/

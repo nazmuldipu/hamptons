@@ -24,10 +24,11 @@ module.exports = {
         'rose': colors.rose,
         'jou-main-1': '#1B3A5C',
         'jou-main': '#354656',
-        'white': '#fff'
+        'white': '#fff',
+        'grey': '#D9D9D6'
       },
       maxWidth: {
-        'mar-desktop': '2560px'
+        'jou-desktop': '1200px'
       },
       borderWidth: {
         '1': '1px',
@@ -36,8 +37,13 @@ module.exports = {
         '5.5': '1.375rem'
       },
       fontFamily: {
-        'serif': ['Adobe Garamond Pro', 'serif']
-      }
+        'serif': ['Adobe Garamond Pro', 'serif'],
+        'hijr': ['Hijrnotes', 'sans-serif']
+      },
+      gridTemplateColumns: {
+         '3-min-min': 'repeat(3, min-content)',
+         '50-40-40': '1.5fr 1fr 1fr'
+      },
     },
   },
   variants: {
