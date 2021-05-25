@@ -1,7 +1,7 @@
 {% from "macros.njk" import menuItems %}
-<header class=" w-full h-16 xmed:h-24 fixed z-40 grid">
+<header class="w-full h-16 xmed:h-24 fixed z-40 grid bg-white">
     <input type="checkbox" id="menu-toggle" class="page-header__toggle hidden">
-    <nav class="nav-bar w-full segment-inner flex xmed:grid items-center justify-between xmed:justify-center px-8 xmed:px-16 overflow-visible">
+    <nav class="nav-bar w-full segment-inner flex xmed:grid items-center justify-between xmed:justify-center px-8 xmed:px-16 overflow-visible apply">
         <div class="">
             {{menuItems('desktop-menu hidden xmed:flex text-center page-header__menu', 'mx-4','text-base', pagename)}}
             <div class="flex items-center">
@@ -29,7 +29,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29964 6.56719L5.62074 5.18595C5.86136 4.94533 5.9809 4.40549 5.62074 4.04455L3.09814 1.22195C3.09814 1.22195 2.49736 0.801628 1.95674 1.10164C1.47628 1.40164 -0.445661 2.9032 0.0950188 6.20704C0.695799 9.87024 7.12242 16.357 10.7856 16.8976C14.0888 17.4383 15.5902 15.5765 15.891 15.0359C16.191 14.4953 15.8309 13.8945 15.8309 13.8945L12.9481 11.3719C12.4676 10.8915 12.0473 11.1313 11.8067 11.3719L10.4856 12.693C9.46446 13.4141 3.57856 7.52822 4.29956 6.56722L4.29964 6.56719Z" fill="#354656"/>
             </svg>
         </a>
-        <a class="reserve-btn">
+        <a href="#" class="reserve-btn">
             <span>Reserve</span>
         </a>
     </nav>

@@ -1,7 +1,7 @@
 {% macro menuItems(parentClass, childClass, grandChildClass, pagename) %}
     <ul class="{{parentClass}} text-center page-header__menu">
         <li class="{{childClass}}">
-            <a href="index.html" class="header-link {% if (pagename == 'hotel') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Hotel</a>
+            <a href="index.html" class="header-link {% if (pagename == 'index') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Hotel</a>
         </li>
         <li class="{{childClass}}">
             <a href="rooms.html" class="header-link {% if (pagename == 'rooms') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Rooms</a>

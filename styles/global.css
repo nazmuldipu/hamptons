@@ -97,14 +97,6 @@ body {
 .page-header__toggle:checked + .nav-bar {
     @apply bg-jou-main;
 }
-@screen xmed {
-    .page-header__menu li:nth-child(4) {
-        @apply block;
-    }
-    .header-link--inactive {
-        @apply text-jou-main;
-    }
-}
 
 .reserve-btn {
     @apply w-24;
@@ -117,8 +109,8 @@ body {
     @apply top-3/4;
     @apply right-3.5;
     @apply block;
+    @apply bg-white;
 }
-
 .reserve-btn > span {
     @apply bg-jou-main;
     @apply w-full;
@@ -129,6 +121,24 @@ body {
     @apply items-center;
     @apply justify-center;
     @apply text-base;
+}
+
+@screen xmed {
+    .page-header__menu li:nth-child(4) {
+        @apply block;
+    }
+    .header-link--inactive {
+        @apply text-jou-main;
+    }
+    .header-link--active {
+        @apply border-b-1;
+        @apply border-vio-1;
+    }
+
+    .reserve-btn {
+        @apply top-4;
+        @apply right-16;
+    }
 }
 
 /****  end page-header  ********************************/

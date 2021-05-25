@@ -25,10 +25,14 @@ module.exports = {
         'jou-main-1': '#1B3A5C',
         'jou-main': '#354656',
         'white': '#fff',
-        'grey': '#D9D9D6'
+        'grey': '#D9D9D6',
+        'grey-1': '#E5E5E5',
+        'violet': '#FDFAF9',
+        'vio-1': '##DBC8B6'
       },
       maxWidth: {
-        'jou-desktop': '1200px'
+        'jou-desktop': '1200px',
+        'hero-width': '832px'
       },
       borderWidth: {
         '1': '1px',
