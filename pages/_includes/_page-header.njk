@@ -1,16 +1,19 @@
-{% macro menuItems(parentClass, childClass, grandChildClass, pagename) %}
-    <ul class="{{parentClass}} text-center page-header__menu">
-        <li class="{{childClass}}">
-            <a href="index.html" class="header-link {% if (pagename == 'index') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Hotel</a>
-        </li>
-        <li class="{{childClass}}">
-            <a href="rooms.html" class="header-link {% if (pagename == 'rooms') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Rooms</a>
-        </li>
-        <li class="{{childClass}}">
-            <a href="amenities.html" class="header-link {% if (pagename == 'amenities') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Amenities</a>
-        </li>
-        <li class="{{childClass}}">
-          <a href="index.html" class="hidden xmed:block mt-1" aria-label="Logo">
+{% from "macros.njk" import menuItems %}
+<header class="w-full h-16 xmed:h-24 fixed z-40 grid bg-white">
+    <input type="checkbox" id="menu-toggle" class="page-header__toggle hidden">
+    <nav class="nav-bar w-full segment-inner flex xmed:grid items-center justify-between xmed:justify-center px-8 xmed:px-16 overflow-visible apply">
+        <div class="">
+            {{menuItems('desktop-menu hidden xmed:flex text-center page-header__menu', 'mx-4','text-base', pagename)}}
+            <div class="flex items-center">
+                <label for="menu-toggle" class="page-header__toggle-button relative w-5.5 h-4 block cursor-pointer menu-toggle__border border-jou-main-1 xmed:hidden"><span class="sr-only">Toggle Button</span></label>
+            </div>
+            <div class="page-header__menu hidden xmed:hidden absolute xmed:relative h-screen left-0 top-16 xmed:top-0 grid-flow-row xmed:grid-flow-col justify-items-center xmed:justify-items-end w-full xmed:w-auto bg-jou-main">
+                <section class="h-72 my-2 pb-4 w-full bg-jou-main">
+                    {{menuItems('xmed:hidden bg-jou-main', 'my-4','text-4xl', pagename)}}
+                </section>
+            </div>
+        </div>
+        <a href="index.html" class="xmed:hidden" aria-label="Logo">
             <svg width="105" height="20" viewBox="0 0 105 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.23911 18.9792C6.31749 18.9792 7.14874 18.8031 7.72387 18.4417C8.299 18.0849 8.71238 17.6332 8.95951 17.0777C9.20664 16.5266 9.34593 15.9079 9.37289 15.2213C9.39985 14.5348 9.41333 13.8618 9.41333 13.2023V0.451667H10.5816V13.6043C10.5816 13.9792 10.5771 14.3993 10.5681 14.86C10.5591 15.3252 10.5052 15.7904 10.4063 16.2647C10.3075 16.7389 10.1592 17.1951 9.95701 17.6423C9.75032 18.0894 9.45377 18.4824 9.06735 18.8302C8.67644 19.178 8.18667 19.458 7.59357 19.6703C7.00046 19.8826 6.25908 19.991 5.37391 19.991C4.09783 19.991 3.09584 19.7877 2.36793 19.3767C1.64003 18.9657 1.10534 18.4417 0.759357 17.8004C0.413378 17.159 0.202196 16.4544 0.121318 15.6911C0.0404393 14.9232 0 14.1825 0 13.4733H1.16824C1.11432 14.187 1.12331 14.8735 1.1952 15.533C1.26709 16.1924 1.44233 16.7751 1.7254 17.2855C2.00848 17.7958 2.43084 18.2023 2.988 18.514C3.54966 18.8257 4.29553 18.9792 5.23911 18.9792Z" fill="#354656"/>
                 <path d="M29.543 10C29.543 11.3911 29.3408 12.6965 28.932 13.916C28.5231 15.1355 27.9345 16.1969 27.1616 17.0958C26.3888 17.9946 25.4452 18.7037 24.3309 19.2231C23.2166 19.738 21.945 20 20.5296 20C19.1097 20 17.8382 19.7425 16.7148 19.2231C15.587 18.7037 14.639 17.9991 13.8706 17.0958C13.0978 16.1969 12.5092 15.1355 12.1003 13.916C11.6914 12.6965 11.4892 11.3911 11.4892 10C11.4892 8.60885 11.6914 7.30352 12.1003 6.08401C12.5092 4.8645 13.0978 3.80307 13.8706 2.90425C14.6435 2.00542 15.5915 1.2963 16.7148 0.776875C17.8382 0.257453 19.1142 0 20.5296 0C21.9495 0 23.2166 0.257453 24.3309 0.776875C25.4497 1.29178 26.3933 2.0009 27.1616 2.90425C27.9345 3.80307 28.5231 4.8645 28.932 6.08401C29.3408 7.30352 29.543 8.60885 29.543 10ZM12.6575 10C12.6575 11.2285 12.8327 12.3893 13.1877 13.4734C13.5426 14.5619 14.0593 15.5104 14.7288 16.3189C15.4028 17.1319 16.2251 17.7778 17.2046 18.2565C18.1796 18.7398 19.285 18.9792 20.5296 18.9792C21.7697 18.9792 22.8751 18.7398 23.8411 18.2565C24.8072 17.7778 25.6249 17.1319 26.2989 16.3189C26.9729 15.5059 27.4851 14.5574 27.8401 13.4734C28.1951 12.3848 28.3748 11.2285 28.3748 10C28.3748 8.77145 28.1951 7.61066 27.8401 6.52213C27.4851 5.43812 26.9729 4.48509 26.2989 3.6766C25.6249 2.86359 24.8072 2.2177 23.8411 1.73893C22.8751 1.25565 21.7697 1.01626 20.5296 1.01626C19.2895 1.01626 18.1796 1.25565 17.2046 1.73893C16.2296 2.2177 15.4028 2.86359 14.7288 3.6766C14.0548 4.48509 13.5426 5.43812 13.1877 6.52213C12.8327 7.61066 12.6575 8.76694 12.6575 10Z" fill="#354656"/>
@@ -19,17 +22,15 @@
                 <path d="M60.2857 0.456194H61.7505L73.743 17.9675H73.7969V0.456194H74.9651V19.5438H73.5812L61.5079 1.89702H61.4585V19.5438H60.2857V0.456194Z" fill="#354656"/>
                 <path d="M75.6571 0.456194H88.4224V1.47245H76.8253V9.11473H87.7304V10.131H76.8253V18.5276H88.5572V19.5438H75.6571V0.456194Z" fill="#354656"/>
                 <path d="M102.864 0.456194H104.167L96.5327 11.5492V19.5438H95.3644V11.5492L87.7843 0.456194H89.1143L95.9755 10.5601L102.864 0.456194Z" fill="#354656"/>
-              </svg>
-          </a>
-        </li>
-        <li class="{{childClass}}">
-            <a href="hamptons.html" class="header-link {% if (pagename == 'hamptons') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Hamptons</a>
-        </li>
-        <li class="{{childClass}}">
-            <a href="offers.html" class="header-link {% if (pagename == 'offers') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Offers</a>
-        </li>
-        <li class="{{childClass}}">
-            <a href="gallery.html" class="header-link {% if (pagename == 'gallery') %} header-link--active {% else %} header-link--inactive {% endif %} {{grandChildClass}}">Gallery</a>
-        </li>
-    </ul>
-{% endmacro %}
+            </svg>
+        </a>
+        <a href="#" class="xmed:hidden">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29964 6.56719L5.62074 5.18595C5.86136 4.94533 5.9809 4.40549 5.62074 4.04455L3.09814 1.22195C3.09814 1.22195 2.49736 0.801628 1.95674 1.10164C1.47628 1.40164 -0.445661 2.9032 0.0950188 6.20704C0.695799 9.87024 7.12242 16.357 10.7856 16.8976C14.0888 17.4383 15.5902 15.5765 15.891 15.0359C16.191 14.4953 15.8309 13.8945 15.8309 13.8945L12.9481 11.3719C12.4676 10.8915 12.0473 11.1313 11.8067 11.3719L10.4856 12.693C9.46446 13.4141 3.57856 7.52822 4.29956 6.56722L4.29964 6.56719Z" fill="#354656"/>
+            </svg>
+        </a>
+        <a href="#" class="reserve-btn">
+            <span>Reserve</span>
+        </a>
+    </nav>
+</header>

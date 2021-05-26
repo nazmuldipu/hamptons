@@ -1,10 +1,13 @@
 /* colors */
 :root {
-    --color__primary: #870000;
-    --color__secondary: #00bed3;
-    --color_tertiary: #4a8546;
+    --color__primary: #354656;
+    --color__blue: #1B3A5C;
+    --color__violet: #FDFAF9;
+    --color__violet-1: #FFF2E5;
+    --color__grey-light: #E5E5E5;
+    --color__grey-cool: #D9D9D6;
 }
 /* fonts */
 :root {
-    --base-font-size: calc(32px + (52 - 32) * ((100vw - 320px) / (1600 - 320))); /* 32px - 52px */
+    --base-font-size: 18px;
 }

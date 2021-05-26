@@ -1,58 +1,33 @@
 ---
 layout: base.njk
 pagename: index
-meta_title: "The Index Page"
+meta_title: "JOURNEY"
 permalink: "build/index.html"
 permalinkBypassOutputDir: true
-nickname: "You Thing"
 ---
-{% from "videos.njk" import lazyvideo %}
 
-<article class="mb-96">
-    <section class="mb-96" x-data="{x: 'PIIi'}" x-init="poop({x: x, y: 12})">
-        <h1>BYE BYE There {{ fake_name }} you {{ nickname }}</h1>
-        <h2 class="hover:text-indigo-900">YO Dane DUUDE</h2>
-        <h3 x-cloak>alpineJS has Loaded</h3>
-        <h4 x-html="x"></h4>
-        <p class="w-24 medium:w-32 large:w-64 text-xl text-purple-400 large:text-blue-500">TEST TEST TEST</p>
-    </section>
-    <section class="m-96"></section>
-    <section class="mb-96">
-        <video class="lazy" autoplay muted loop playsinline width="610" height="254" poster="images/ameswell_entrance.png">
-            <source data-src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
-        </video>
-       {{ lazyvideo([{ src: "videos/ameswell_entrance.mp4", type: "video/mp4" }], "images/ameswell_entrance.png") }} 
-    </section>
-</article>
-
-<div>
-<article class="mt-96 max-w-3xl">
-    <section class="max-w-screen-lg">
-    <random-list-adder>
-    <div id="test-slider" class="splide">
-        <div class="splide__arrows">
-            <button class="bg-rose-500 splide__arrow splide__arrow--prev">
-                Prev
-            </button>
-            <button class="bg-green-400 splide__arrow splide__arrow--next">
-                Next
-            </button>
+<section class="segment-outer pt-16 xmed:pt-24 pb-10 bg-violet">
+    <div class="segment-inner px-4 pt-4 xmed:pt-16">
+        <h2 class="text-2xl text-center mb-1">A sophisticated, contemporary sanctuary in the Hamptons</h2>
+        <div class="max-w-hero-width mx-auto">
+            <picture>
+                <source src="images/guest-house-library-bar-1.webp" type="image/webp" srcset="
+                    images/guest-house-library-bar-1.webp 900w,
+                    images/guest-house-library-bar-1_640.webp 640w
+                ">
+                <img src="images/guest-house-library-bar-1.png" class="inline-block" alt="Guest House Libraby Bar" srcset="
+                    images/guest-house-library-bar-1.png 900w,
+                    images/guest-house-library-bar-1.png 640w
+                ">
+            </picture>
         </div>
-        <div class="splide__track">
-            <ul class="splide__list bg-yellow-500">
-                <li class="splide__slide">
-                    <img data-splide-lazy="https://burst.shopifycdn.com/photos/spinal-twist-yoga-wheel.jpg" alt="stuff">
-                </li>
-                <li class="splide__slide">
-                    <img data-splide-lazy="https://burst.shopifycdn.com/photos/dusty-rose.jpg" alt="dog">
-                </li>
-                <li class="splide__slide">
-                    <img data-splide-lazy="https://burst.shopifycdn.com/photos/berries-granola.jpg" alt="cat">
-                </li>
-            </ul>
+        <figcaption>
+            <p class="font-hijrnotes text-4xl text-center">where travel <br class="sm:hidden">meets charm</p>
+        </figcaption>
+        <div class="xmed:hidden flex justify-center mt-1">
+            <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
+            </svg>
         </div>
     </div>
-</random-list-adder>
 </section>
-</article>
-</div>
