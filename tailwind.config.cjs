@@ -53,7 +53,8 @@ module.exports = {
   variants: {
     extend: {
       textColor: ['active'],
-      backgroundColor: ['active']
+      backgroundColor: ['active'],
+      borderWidth: ['last'], //TODO, I dont know why it is not working in my machine, added by Meherab 5th May 2021
     },
   },
   plugins: [
