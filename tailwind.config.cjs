@@ -28,7 +28,7 @@ module.exports = {
         'grey': '#D9D9D6',
         'grey-1': '#E5E5E5',
         'violet': '#FDFAF9',
-        'vio-1': '##DBC8B6'
+        'vio-1': '#DBC8B6'
       },
       maxWidth: {
         'jou-desktop': '1200px',
@@ -53,7 +53,8 @@ module.exports = {
   variants: {
     extend: {
       textColor: ['active'],
-      backgroundColor: ['active']
+      backgroundColor: ['active'],
+      borderWidth: ['last'], //TODO, I dont know why it is not working in my machine, added by Meherab 5th May 2021
     },
   },
   plugins: [
