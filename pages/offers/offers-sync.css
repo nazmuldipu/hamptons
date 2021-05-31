@@ -1,0 +1,11 @@
+/****  start imports  ********************************/
+@import "../../styles/global.css";
+/****  end imports  ********************************/
+@layer base{
+    .segment-outer__image-panel{
+        @apply pb-16;
+    }
+    .segment-outer__image-panel:last-child{
+        @apply pb-0;
+    }
+}

@@ -1,0 +1,76 @@
+---
+layout: base.njk
+pagename: offers
+meta_title: "JOURNEY"
+permalink: "build/offers.html"
+permalinkBypassOutputDir: true
+---
+
+<section class="bg-violet">
+    <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
+        <section class="segment-inner px-4 pt-4 xmed:pt-16">
+            <figcaption>
+                <h2 class="text-5xl text-center pb-2 mb-1">
+                    We provides best affordable offers for you
+                </h2>
+            </figcaption>
+            <figure class="max-w-hero-width mx-auto">
+                <picture>
+                    <source src="images/offers-1.webp" type="image/webp" srcset="
+                    images/offers-1.webp 600w,
+                    images/offers-1_300.webp 300w
+                ">
+                    <img src="images/offers-1.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
+                    images/offers-1.jpg 600w,
+                    images/offers-1.jpg 300w
+                ">
+                </picture>
+            </figure>
+            <article class="max-w-2xl m-auto">
+                <header>
+                    <h1 class="font-hijrnotes text-6xl text-center">
+                        celebrate our offers
+                    </h1>
+                </header>
+                <div class="xmed:hidden flex justify-center my-16">
+                    <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
+                    </svg>
+                </div>
+                <p class="text-center pt-4">
+                    A local, down to earth, experience for our guests, making them always feel at home.
+                </p>
+            </article>
+        </section>
+    </section>
+
+    {% for item in imagePanels %}
+        <section class="segment-outer segment-outer__image-panel">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center bg-vio-1">
+                <figure class="xmed:justify-end {{ item.figureOrder }}">
+                    <picture>
+                        <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
+                    {{ item.imageUrl }}.webp 600w,
+                    {{ item.imageUrl }}_300.webp 300w
+                ">
+                        <img class="w-full" src="{{ item.imageUrl }}.jpg" class="inline-block" alt="the lawn">
+                    </picture>
+                </figure>
+                <figcaption class="text-justify px-8 xmed:px-16 py-8 xmed:py-0 xmed:justify-start {{ item.figcaptionOrder}}">
+                    <header class="font-serif text-4xl pb-6"> {# //TODO if font-hijrnotes used here numbers are not showing #}
+                        <h4>{{ item.title }}</h4>
+                    </header>
+                    <p>{{ item.p1 }}</p>
+                </figcaption>
+            </section>
+        </section>
+    {% endfor %}
+</section>
+
+<section class="segement-outer bg-violet mt-16">
+    <section class="segment-inner">
+        <figure class="max-w-3xl m-auto">
+            <img class="w-full" src="images/offers-5.jpg" class="" alt="map">
+        </figure>
+    </section>
+</section>
