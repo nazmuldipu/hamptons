@@ -10,7 +10,7 @@ permalinkBypassOutputDir: true
     <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
         <section class="segment-inner px-4 pt-4 xmed:pt-16">
             <figcaption>
-                <h2 class="text-5xl text-center pb-2 mb-1">
+                <h2 class="text-5xl max-w-2xl m-auto text-center pb-2 mb-1">
                     We provides best affordable offers for you
                 </h2>
             </figcaption>
@@ -45,8 +45,8 @@ permalinkBypassOutputDir: true
     </section>
 
     {% for item in imagePanels %}
-        <section class="segment-outer segment-outer__image-panel">
-            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center bg-vio-1">
+        <section class="segment-outer">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-8 bg-vio-1">
                 <figure class="xmed:justify-end {{ item.figureOrder }}">
                     <picture>
                         <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
@@ -61,16 +61,20 @@ permalinkBypassOutputDir: true
                         <h4>{{ item.title }}</h4>
                     </header>
                     <p>{{ item.p1 }}</p>
+                    <div class="mt-8 text-center xmed:text-left">
+                        <a href="#" class="font-serif italic border inline px-6 py-2">Book Offer</a>
+                    </div>
                 </figcaption>
             </section>
         </section>
     {% endfor %}
-</section>
 
-<section class="segement-outer bg-violet mt-16">
+    <section class="segement-outer bg-violet mt-16">
     <section class="segment-inner">
         <figure class="max-w-3xl m-auto">
             <img class="w-full" src="images/offers-5.jpg" class="" alt="map">
         </figure>
     </section>
 </section>
+</section>
+
