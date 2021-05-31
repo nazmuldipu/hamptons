@@ -9,7 +9,8 @@ permalinkBypassOutputDir: true
 <section class="segment-outer pt-16 xmed:pt-24 pb-10 bg-violet">
     <section class="segment-inner px-4 pt-4 xmed:pt-16">
         <figcaption>
-            <h2 class="text-5xl text-center pb-2 mb-1">A hidden gem for the <br>modern explorer</br></h2>
+            <h2 class="text-5xl text-center pb-2 mb-1">A hidden gem for the <br>modern explorer</br>
+            </h2>
         </figcaption>
         <figure class="max-w-hero-width mx-auto">
             <picture>
@@ -34,102 +35,43 @@ permalinkBypassOutputDir: true
             </header>
             <div class="xmed:hidden flex justify-center my-16">
                 <img src="/images/amenities-1.svg">
-            </div>            
+            </div>
             <p class="text-center pt-4">
                 Sometimes all you need is to escape from the city, enjoy the nature, absorve the sun, and feel the sea breeze.We offer a variety of amenities to enhance your stay.
             </p>
         </article>
     </section>
 </section>
-<!--start here -->
-<section class="segment-outer mt-16 pb-16">
-    <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:pt-16 xmed:pb-16 items-center bg-vio-1">
-        <figure>
-            <picture>
-                 <source src="images/amenities-2.webp" type="image/webp" srcset="
-                    images/amenities-2.webp 600w,
-                    images/amenities-2_300.webp 300w
-                ">              
-                <img class="w-full" src="images/amenities-2.jpg" class="inline-block" alt="the pool">
-            </picture>
-        </figure>
-        <figcaption class="text-justify px-16 sm:py-8 sm:pl-16 xmed:py-0">
-            <header class="font-hijrnotes text-4xl pb-6">The pool</header>
-            <p>There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house.</p>
-        </figcaption>
-    </section>
-</section>
-<!--end here -->
 
-<!--start here -->
-<section class="segment-outer pb-16">
-    <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:pt-16 xmed:pb-16 items-center bg-grey">
-        <figure class="xmed:justify-end order-2">
-            <picture>
-                 <source src="images/amenities-3.webp" type="image/webp" srcset="
-                    images/amenities-3.webp 600w,
-                    images/amenities-3_300.webp 300w
-                ">              
-                <img class="w-full" src="images/amenities-3.jpg" class="inline-block" alt="the lawn">
-            </picture>
-        </figure>
-        <figcaption class="text-justify px-16 sm:py-8 sm:pl-16 xmed:py-0 xmed:justify-start order-1">
-            <header class="font-hijrnotes text-4xl pb-6">The lawn</header>
-            <p>There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house.</p>
-        </figcaption>
+{% for item in imagePanels %}
+    <section class="segment-outer pb-16">
+        <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center {{ item.backgroundColor }}">
+            <figure class="xmed:justify-end {{ item.figureOrder }}">
+                <picture>
+                    <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
+                    {{ item.imageUrl }}.webp 600w,
+                    {{ item.imageUrl }}_300.webp 300w
+                ">
+                    <img class="w-full" src="{{ item.imageUrl }}.jpg" class="inline-block" alt="the lawn">
+                </picture>
+            </figure>
+            <figcaption class="text-justify px-8 xmed:px-16 py-8 xmed:py-0 xmed:justify-start {{ item.figcaptionOrder}}">
+                <header class="font-hijrnotes text-4xl pb-6">{{ item.title }}</header>
+                <p>{{ item.p1 }}</p>
+            </figcaption>
+        </section>
     </section>
-</section>
-<!--end here -->
-
-<!--start here -->
-<section class="segment-outer pb-16">
-    <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:pt-16 xmed:pb-16 items-center bg-vio-1">
-        <figure>
-            <picture>
-                 <source src="images/amenities-4.webp" type="image/webp" srcset="
-                    images/amenities-4.webp 600w,
-                    images/amenities-4_300.webp 300w
-                ">              
-                <img class="w-full" src="images/amenities-4.jpg" class="inline-block" alt="the bikes">
-            </picture>
-        </figure>
-        <figcaption class="text-justify px-16 sm:py-8 sm:pl-16 xmed:py-0">
-            <header class="font-hijrnotes text-4xl pb-6">The bikes</header>
-            <p>There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house.</p>
-        </figcaption>
-    </section>
-</section>
-<!--end here -->
-
-<!--start here -->
-<section class="segment-outer pb-16">
-    <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:pt-16 xmed:pb-16 items-center bg-grey">
-        <figure class="xmed:justify-end order-2">
-            <picture>
-                 <source src="images/amenities-5.webp" type="image/webp" srcset="
-                    images/amenities-5.webp 600w,
-                    images/amenities-5_300.webp 300w
-                ">              
-                <img class="w-full" src="images/amenities-5.jpg" class="inline-block" alt="the lobby">
-            </picture>
-        </figure>
-        <figcaption class="text-justify px-16 sm:py-8 sm:pl-16 xmed:py-0 xmed:justify-start order-1">
-            <header class="font-hijrnotes text-4xl pb-6">The lobby</header>
-            <p>There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house.</p>
-        </figcaption>
-    </section>
-</section>
-<!--end here -->
+{% endfor %}
 
 <!-- start here-->
 <section class="segement-outer">
     <section class="segment-inner">
         <article class="text-center mb-8">
-             <header class="font-hijrnotes text-6xl mb-6">
+            <header class="font-hijrnotes text-6xl mb-6">
                 <h1>Something special for you</h1>
-             </header>
-             <p class="mb-6">Click below to view available offers</p>
-             <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
+            </header>
+            <p class="mb-6">Click below to view available offers</p>
+            <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
         </article>
     </section>
 </section>
@@ -138,9 +80,9 @@ permalinkBypassOutputDir: true
 <!-- start here-->
 <section class="segement-outer bg-violet mt-16">
     <section class="segment-inner">
-         <figure class="max-w-3xl m-auto">
+        <figure class="max-w-3xl m-auto">
             <img class="w-full" src="images/amenities-6.jpg" class="" alt="map">
-         </figure>
+        </figure>
     </section>
 </section>
 <!--end here -->
