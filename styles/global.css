@@ -161,4 +161,8 @@ body {
     @apply font-hijr;
 }
 
+.font-paragraph{
+    @apply text-2xl
+}
+
 /****  end page-content  ********************************/
