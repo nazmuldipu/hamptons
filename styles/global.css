@@ -162,7 +162,7 @@ body {
 }
 
 .font-paragraph{
-    @apply text-2xl
+    @apply text-base xmed:text-2xl;
 }
 
 /****  end page-content  ********************************/
