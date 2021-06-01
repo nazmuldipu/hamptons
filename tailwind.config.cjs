@@ -44,6 +44,9 @@ module.exports = {
         'serif': ['Adobe Garamond Pro', 'serif'],
         'hijr': ['Hijrnotes', 'sans-serif']
       },
+      fontSize:{
+        '6.5xl':'4rem'
+      },
       gridTemplateColumns: {
          '3-min-min': 'repeat(3, min-content)',
          '50-40-40': '1.5fr 1fr 1fr'
