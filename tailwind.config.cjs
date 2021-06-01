@@ -32,7 +32,8 @@ module.exports = {
       },
       maxWidth: {
         'jou-desktop': '1200px',
-        'hero-width': '832px'
+        'hero-width': '832px',
+        'max-w-19rem':'19rem'
       },
       borderWidth: {
         '1': '1px',
