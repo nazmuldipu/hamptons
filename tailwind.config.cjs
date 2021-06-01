@@ -45,7 +45,8 @@ module.exports = {
         'hijr': ['Hijrnotes', 'sans-serif']
       },
       fontSize:{
-        '6.5xl':'4rem'
+        '6.5xl':'4rem',
+        '4.5xl':'2.5rem'
       },
       gridTemplateColumns: {
          '3-min-min': 'repeat(3, min-content)',
