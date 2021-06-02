@@ -40,6 +40,10 @@ module.exports = {
       width: {
         '5.5': '1.375rem'
       },
+      height:{
+        '25':'100px',
+        '15':'60px'
+      },
       fontFamily: {
         'serif': ['Adobe Garamond Pro', 'serif'],
         'hijr': ['Hijrnotes', 'sans-serif']

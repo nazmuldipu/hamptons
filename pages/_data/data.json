@@ -5,5 +5,42 @@
             "href": "fonts/SpaceMono-Regular.ttf",
             "type": "font/ttf"
         }
-    ]
+    ],
+    "nav_menu": [
+        {
+            "name": "Hotel",
+            "path": "index",
+            "href": "index.html"
+        },
+        {
+            "name": "Rooms",
+            "path": "rooms",
+            "href": "rooms.html"
+        },
+        {
+            "name": "Amenities",
+            "path": "amenities",
+            "href": "amenities.html"
+        },
+        {
+            "name": "logo",
+            "path": "logo"
+        },
+        {
+            "name": "Hamptons",
+            "path": "hamptons",
+            "href": "hamptons.html"
+        },
+        {
+            "name": "Offers",
+            "path": "offers",
+            "href": "offers.html"
+        },
+        {
+            "name": "Gallery",
+            "path": "gallery",
+            "href": "gallery.html"
+        }
+    ],
+    "phone": "123-456-7890"
 }
