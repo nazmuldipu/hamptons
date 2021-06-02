@@ -7,7 +7,8 @@ permalinkBypassOutputDir: true
 ---
 
 <section class="bg-violet">
-    <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
+<!--starts here-->
+    <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10">
         <section class="segment-inner px-4 pt-4 xmed:pt-16">
             <figcaption>
                 <h2 class="text-5xl text-center pb-2 mb-1">
@@ -37,56 +38,73 @@ permalinkBypassOutputDir: true
                 </p>
             </article>
         </section>
+    </section> 
+<!--ends here-->  
+<!--starts here-->  
+    <section class="segment-outer">
+        <section class="segment-inner xmed:grid grid-cols-2 gap-x-8 xmed:py-16 items-center">
+            <figcaption class="text-justify px-8 xmed:px-16 py-8 xmed:py-0 xmed:justify-start -1">
+                <h4 class="font-hijrnotes text-4xl pb-6">welcome to the hamptons</h4>
+                <article>
+                    <header class="text-4xl pb-6">
+                        <h4>Hamptons since 1972 </h4>
+                    </header>
+                    <p class="text-2xl">The first inn located in America was recorded in the year 1607 and lead the way with many other firsts in the hospitality industry. The first publicly held hotel (the City Hotel) opened in New York in 1792. The first modern hotel (the Tremont) opened in Boston in 1809 and the first business hotel (the Buffalo Statler) opened in 1908.</p>
+                </article>
+            </figcaption>
+            <figure class="xmed:justify-end ">
+                <picture>
+                    <source src="images/hamptons-2.webp" type="image/webp" srcset="
+                    images/hamptons-2.webp 600w,
+                    images/hamptons-2_300.webp 300w
+                    ">
+                    <img src="images/hamptons-2.jpg" class="inline-block" alt="rooms" srcset="
+                    images/hamptons-2.jpg 600w,
+                    images/hamptons-2.jpg 300w
+                    ">
+                </picture>
+            </figure>
+            <figure class="xmed:justify-end -3 mt-8">
+                <picture>
+                    <source src="images/hamptons-3.webp" type="image/webp" srcset="
+                    images/hamptons-3.webp 600w,
+                    images/hamptons-3_300.webp 300w
+                    ">
+                    <img src="images/hamptons-3.jpg" class="inline-block" alt="rooms" srcset="
+                    images/hamptons-3.jpg 600w,
+                    images/hamptons-3.jpg 300w
+                    ">
+                </picture>
+            </figure>
+            <figure class="xmed:justify-end -4 mt-8">
+                <picture>
+                    <source src="images/hamptons-4.webp" type="image/webp" srcset="
+                    images/hamptons-4.webp 600w,
+                    images/hamptons-4_300.webp 300w
+                    ">
+                    <img src="images/hamptons-4.jpg" class="inline-block" alt="rooms" srcset="
+                    images/hamptons-4.jpg 600w,
+                    images/hamptons-4.jpg 300w
+                    ">
+                </picture>
+            </figure>            
+        </section>
     </section>
-</section>
-
-<section class="segment-outer">
-    <section class="segment-inner xmed:grid grid-cols-2 gap-x-8 xmed:py-16 items-center">
-        <figure class="xmed:justify-end order-2">
-            <picture>
-                <source src="images/hamptons-2.webp" type="image/webp" srcset="
-                images/hamptons-2.webp 600w,
-                images/hamptons-2_300.webp 300w
-                ">
-                <img src="images/hamptons-2.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
-                images/hamptons-2.jpg 600w,
-                images/hamptons-2.jpg 300w
-                ">
-            </picture>
-        </figure>
-        <figure class="xmed:justify-end order-3 mt-8">
-            <picture>
-                <source src="images/hamptons-3.webp" type="image/webp" srcset="
-                images/hamptons-3.webp 600w,
-                images/hamptons-3_300.webp 300w
-                ">
-                <img src="images/hamptons-3.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
-                images/hamptons-3.jpg 600w,
-                images/hamptons-3.jpg 300w
-                ">
-            </picture>
-        </figure>
-        <figure class="xmed:justify-end order-4 mt-8">
-            <picture>
-                <source src="images/hamptons-4.webp" type="image/webp" srcset="
-                images/hamptons-4.webp 600w,
-                images/hamptons-4_300.webp 300w
-                ">
-                <img src="images/hamptons-4.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
-                images/hamptons-4.jpg 600w,
-                images/hamptons-4.jpg 300w
-                ">
-            </picture>
-        </figure>
-        <figcaption class="text-justify px-8 xmed:px-16 py-8 xmed:py-0 xmed:justify-start order-1">
-            <h4 class="font-hijrnotes text-4xl pb-6">welcome to the hamptons</h4>
-            <article>
-                <header class="text-4xl pb-6">
-                    <h4>Hamptons since 1972 </h4>
-                </header>
-                <p class="text-2xl">The first inn located in America was recorded in the year 1607 and lead the way with many other firsts in the hospitality industry. The first publicly held hotel (the City Hotel) opened in New York in 1792. The first modern hotel (the Tremont) opened in Boston in 1809 and the first business hotel (the Buffalo Statler) opened in 1908.</p>
-            </article>
-        </figcaption>
-    </section>
+<!--ends here-->    
+<!--starts here--> 
+    <section class="segment-outer">
+        <section class="segment-inner xmed:grid grid-cols-4 gap-x-4 pb-20">
+            {% for item in imagePanels %}
+                <figure class="bg-white h-60 w-64 shadow-lg relative text-center flex items-center justify-center">
+                        <picture>
+                            <img src="{{ item.imageUrl }}.webp" class="inline-block" alt="{{item.imageAlt}}">
+                        </picture>
+                        <h2 class="absolute font-semibold text-4xl inset-x-0 top-20 ">{{item.title}}</h2>
+                        <p class="absolute inset-x-0 bottom-12">{{item.p1}}</p>
+                </figure>  
+            {% endfor %}       
+        </section>        
+    </section>   
+<!--ends here-->   
 </section>
 
