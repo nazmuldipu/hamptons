@@ -38,11 +38,13 @@ module.exports = {
         '1': '1px',
       },
       width: {
-        '5.5': '1.375rem'
+        '5.5': '1.375rem',
+        '126':'31.5rem'
       },
       height:{
+        '15':'60px',
+        '19':'76px',
         '25':'100px',
-        '15':'60px'
       },
       fontFamily: {
         'serif': ['Adobe Garamond Pro', 'serif'],
