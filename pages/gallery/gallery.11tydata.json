@@ -1,0 +1,34 @@
+{
+    "imagePanels": [
+        {
+            "backgroundColor": "bg-vio-1",
+            "imageUrl": "images/gallery-1",
+            "imageAlt": "The pool"
+        },
+        {
+            "backgroundColor": "bg-vio-1",
+            "imageUrl": "images/gallery-2",
+            "imageAlt": "The pool"
+        },
+        {
+            "backgroundColor": "bg-grey",
+            "imageUrl": "images/gallery-3",
+            "imageAlt": "The lawn"
+        },
+        {
+            "backgroundColor": "bg-vio-1",
+            "imageUrl": "images/gallery-4",
+            "imageAlt": "The bikes"
+        },
+        {
+            "backgroundColor": "bg-vio-1",
+            "imageUrl": "images/gallery-5",
+            "imageAlt": "The lobby"
+        },
+        {
+            "backgroundColor": "bg-vio-1",
+            "imageUrl": "images/gallery-6",
+            "imageAlt": "The lobby"
+        }
+    ]
+}
