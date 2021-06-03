@@ -1,0 +1,19 @@
+/****  start imports  ********************************/
+@import "../../styles/global.css";
+/****  end imports  ********************************/
+
+@layer base{
+    .gallery {
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-2;
+        @apply auto-rows-auto;
+      }
+      
+      /* .gallery {
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-2;
+        @apply auto-rows-auto;
+      } */
+}
