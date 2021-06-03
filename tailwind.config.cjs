@@ -28,7 +28,8 @@ module.exports = {
         'grey': '#D9D9D6',
         'grey-1': '#E5E5E5',
         'violet': '#FDFAF9',
-        'vio-1': '#DBC8B6'
+        'vio-1': '#DBC8B6',
+        'dawn-pink':'#EEE5DC'
       },
       maxWidth: {
         'jou-desktop': '1200px',
