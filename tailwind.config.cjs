@@ -33,7 +33,7 @@ module.exports = {
       maxWidth: {
         'jou-desktop': '1200px',
         'hero-width': '832px',
-        'max-w-19rem':'19rem'
+        'subheader__caption':'19rem'
       },
       borderWidth: {
         '1': '1px',
