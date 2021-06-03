@@ -164,5 +164,14 @@ body {
 .font-paragraph{
     @apply text-base xmed:text-2xl;
 }
+.button__primary{
+    @apply font-serif;
+    @apply italic;
+    @apply text-base;
+    @apply border;
+    @apply inline;
+    @apply px-6;
+    @apply py-2;
+}
 
 /****  end page-content  ********************************/
