@@ -1,0 +1,73 @@
+---
+layout: base.njk
+pagename: The Gallery
+meta_title: "JOURNEY"
+permalink: "build/gallery.html"
+permalinkBypassOutputDir: true
+---
+
+<section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
+    <section class="segment-inner px-4 pt-4 xmed:pt-16">
+        <figcaption>
+            <h2 class="text-5xl text-center pb-2 mb-1">
+                    A hidden gem for the <br>modern explorer</br>
+            </h2>
+        </figcaption>
+        <figure class="max-w-hero-width mx-auto">
+            <picture>
+                <source src="images/gallery-1.webp" type="image/webp" srcset="
+                    images/gallery-1.webp 600w,
+                    images/gallery-1_300.webp 300w
+                ">
+                <img src="images/gallery-1.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
+                    images/gallery-1.jpg 600w,
+                    images/gallery-1.jpg 300w
+                ">
+            </picture>
+        </figure>
+        <article class="max-w-2xl m-auto">
+            <header>
+                <h1 class="font-hijrnotes text-6xl text-center">
+                        enjoy the journey
+                    </h1>
+            </header>
+            <div class="xmed:hidden flex justify-center my-16">
+                <img src="/images/gallery-1.svg">
+            </div>
+        </article>
+        <article class="max-w-2xl m-auto">
+            <header>
+                <h4 class="xmed:hidden text-center text-2xl">
+                        Our special aminities
+                    </h4>
+            </header>
+            <p class="text-center pt-4">
+                    Sometimes all you need is to escape from the city, enjoy the nature, absorve the sun, and feel the sea breeze.We offer a variety of gallery to enhance your stay.
+                </p>
+        </article>
+    </section>
+</section>
+
+<section class="segment-outer">
+    <section class="segment-inner gallery xmed:py-16" id="gallery">
+        {% for item in imagePanels %}
+            <figure class="gallery-item">
+                <picture>
+                    <img class="max-w-full h-auto" src="{{ item.imageUrl }}.webp" alt="the lawn" >
+                </picture>
+            </figure>
+        {% endfor %}
+    </section>
+</section>
+
+<section class="segement-outer">
+    <section class="segment-inner">
+        <article class="text-center mb-8 mt-16">
+            <header class="font-hijrnotes text-6xl mb-6">
+                <h1>something special for you</h1>
+            </header>
+            <p class="mb-6">Click below to view available offers</p>
+            <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
+        </article>
+    </section>
+</section>
