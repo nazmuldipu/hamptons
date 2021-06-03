@@ -49,13 +49,13 @@ permalinkBypassOutputDir: true
 </section>
 
 <section class="segment-outer">
-    <section class="segment-inner gallery xmed:py-16" id="gallery">
+    <section class="segment-inner grid grid-cols-2 gap-2 xmed:py-16" id="gallery">
         {% for item in imagePanels %}
             <figure class="gallery-item">
-                <picture>
-                    <img class="max-w-full h-auto" src="{{ item.imageUrl }}.webp" alt="the lawn" >
-                </picture>
-            </figure>
+                    <picture class="content">
+                        <img src="{{ item.imageUrl }}.webp" alt="the lawn" >
+                    </picture>
+                </figure>
         {% endfor %}
     </section>
 </section>
