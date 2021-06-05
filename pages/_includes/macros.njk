@@ -33,3 +33,60 @@
         </li>
     </ul>
 {% endmacro %}
+{% macro subheader(figcaption = '', imageUrl = '', imageAlt = '', imageType = '') %}
+    <section class="segment-outer pt-16 xmed:pt-24 xmed:pb-10">
+        <section class="segment-inner px-8 xmed:px-0 pt-4 xmed:pt-16">
+            <figcaption>
+                <h2 class="text-2xl xmed:text-5xl max-w-subheader__caption xmed:max-w-2xl m-auto text-center pb-2 mb-1">
+                    {{ figcaption }}
+                </h2>
+            </figcaption>
+            <figure class="max-w-hero-width mx-auto">
+                <picture>
+                    <source src="images/{{imageUrl}}.webp" type="image/webp" srcset="
+                    images/{{imageUrl}}.webp 600w,
+                    images/{{imageUrl}}_300.webp 300w
+                ">
+                    <img src="images/offers-1.{{imageType}}" class="inline-block" alt="{{imageAlt}}" srcset="
+                    images/{{imageUrl}}.{{imageType}} 600w,
+                    images/{{imageUrl}}.{{imageType}} 300w
+                ">
+                </picture>
+            </figure>
+        </section>
+    </section>
+{% endmacro %}
+{% macro hijrnotesSubheader(header = '', hasSvg = 'false') %}
+    <section class="segment-outer">
+        <section class="segment-inner px-4">
+            <article class="max-w-2xl mt-4 m-auto">
+                <header>
+                    <h1 class="font-hijrnotes text-4xl xmed:text-6.5xl text-center">
+                        {{ header }}
+                    </h1>
+                </header>
+                {% if hasSvg == 'true' %}
+                    <div class="flex justify-center my-8">
+                        <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
+                        </svg>
+                    </div>
+                {% endif %}
+            </article>
+        </section>
+    </section>
+{% endmacro %}
+{% macro articleSubheader(header = '', p1 = '') %}
+    <section class="segment-outer mb-16">
+        <article class="segment-inner px-8 xmed:px-0">
+            <header>
+                <h4 class="text-4xl text-center font-bold">
+                    {{ header }}
+                </h4>
+            </header>
+            <p class="font-paragraph text-center pt-4">
+                {{ p1 }}
+            </p>
+        </article>
+    </section>
+{% endmacro %}
