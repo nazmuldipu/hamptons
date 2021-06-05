@@ -1,3 +1,13 @@
 /****  start imports  ********************************/
 @import "../../styles/global.css";
 /****  end imports  ********************************/
+@layer base{
+    .gallery-image__column{
+        column-count: 2;
+    }
+    @media only screen and (max-width: 900px) {
+        .gallery-image__column {
+            column-count: 1;
+        }
+    }
+}
