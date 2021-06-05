@@ -5,9 +5,12 @@ meta_title: "JOURNEY"
 permalink: "build/gallery.html"
 permalinkBypassOutputDir: true
 ---
-{% from "macros.njk" import subheader,
-hijrnotesSubheader,
-articleSubheader %}
+{% from "macros.njk" import 
+    subheader,
+    hijrnotesSubheader,
+    articleSubheader,
+    subfooter 
+%}
 {{ subheader(
     'Gallery',
     'gallery-0',
@@ -22,7 +25,17 @@ articleSubheader %}
 }}
 
 <section class="segment-outer">
-    <section class="segment-inner gallery-image__column xmed:py-16">
+    <section class="segment-inner">
+        <section class="flex justify-center">
+            <div class="border-b-1 border-jou-main-2">All</div>
+            <div class="ml-8">Hotel</div>
+            <div class="ml-8">Rooms</div>
+            <div class="ml-8">Hamptons</div>
+        </section>
+    </section>
+</section>
+<section class="segment-outer bg-jou-main-3">
+    <section class="segment-inner gallery-image__column py-8 xmed:pb-16">
         {% for item in imagePanels %}
             <figure class="inline-block mb-2 px-8 xmed:px-0">
                 <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
@@ -30,3 +43,4 @@ articleSubheader %}
         {% endfor %}
     </section>
 </section>
+{{ subfooter() }}
