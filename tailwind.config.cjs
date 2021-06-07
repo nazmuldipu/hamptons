@@ -23,6 +23,8 @@ module.exports = {
       colors: {
         'rose': colors.rose,
         'jou-main-1': '#1B3A5C',
+        'jou-main-2': '#DBC8B6',
+        'jou-main-3': '#EEE5DC',
         'jou-main': '#354656',
         'white': '#fff',
         'grey': '#D9D9D6',
