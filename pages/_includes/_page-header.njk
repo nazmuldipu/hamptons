@@ -8,7 +8,7 @@ showLogo %}
             {% if data.nav_menu %}
                 {{menuItems('desktop-menu hidden xmed:flex', 'mx-2 lg:mx-4 mar-tablet:mx-6','text-base', data.nav_menu, pagename)}}
             {% endif %}
-            <div class="flex items-center">
+            <div class="justify-self-start">
                 <label for="menu-toggle" class="page-header__toggle-button relative w-5.5 h-4 block cursor-pointer menu-toggle__border border-jou-main-1 xmed:hidden">
                     <span class="sr-only">Toggle Button</span></label>
             </div>
@@ -22,16 +22,16 @@ showLogo %}
         </div>
 
         <div class="nav_white hidden">
-            {{showLogo('xmed:hidden', 'white')}}
+            {{showLogo('xmed:hidden', '#fff')}}
         </div>
         <div class="nav_dark">
-            {{showLogo('xmed:hidden', 'dark')}}
+            {{showLogo('xmed:hidden' )}}
         </div>
 
-        <a href="tel:{{data.phone}}" class="nav_dark xmed:hidden">
+        <a class="justify-self-end nav_dark xmed:hidden" href="tel:{{data.phone}}">
             <img src="/images/phone_dark.svg" alt="Logo">
         </a>
-        <a href="tel:{{data.phone}}" class="nav_white hidden">
+        <a  class="justify-self-end nav_white hidden" href="tel:{{data.phone}}">
             <img src="/images/phone.svg" alt="Logo">
         </a>
 
