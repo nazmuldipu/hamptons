@@ -1,0 +1,28 @@
+{
+    "imagePanels": [
+        {
+            "imageUrl": "images/offers-2",
+            "imageAlt": "buy 3 get 4",
+            "figureOrder": "order-1",
+            "figcaptionOrder": "order-2",
+            "title": "buy 3 get 4",
+            "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
+        },
+        {
+            "imageUrl": "images/offers-3",
+            "imageAlt": "free fam rooms",
+            "figureOrder": "order-1",
+            "figcaptionOrder": "order-2",
+            "title": "free fam rooms",
+            "p1": "Friends of Journey stay for free."
+        },
+        {
+            "imageUrl": "images/offers-4",
+            "imageAlt": "buy 1 get 2",
+            "figureOrder": "order-1",
+            "figcaptionOrder": "order-2",
+            "title": "buy 1 get 2",
+            "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
+        }
+    ]
+}

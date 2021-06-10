@@ -23,6 +23,8 @@ module.exports = {
       colors: {
         'rose': colors.rose,
         'jou-main-1': '#1B3A5C',
+        'jou-main-2': '#DBC8B6',
+        'jou-main-3': '#EEE5DC',
         'jou-main': '#354656',
         'white': '#fff',
         'grey': '#D9D9D6',
@@ -32,7 +34,8 @@ module.exports = {
       },
       maxWidth: {
         'jou-desktop': '1200px',
-        'hero-width': '832px'
+        'hero-width': '832px',
+        'subheader__caption':'19rem'
       },
       borderWidth: {
         '1': '1px',
@@ -49,6 +52,10 @@ module.exports = {
       fontFamily: {
         'serif': ['Adobe Garamond Pro', 'serif'],
         'hijr': ['Hijrnotes', 'sans-serif']
+      },
+      fontSize:{
+        '6.5xl':'4rem',
+        '4.5xl':'2.5rem'
       },
       gridTemplateColumns: {
          '3-min-min': 'repeat(3, min-content)',

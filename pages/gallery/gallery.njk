@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagename: The Gallery
+meta_title: "JOURNEY"
+permalink: "build/gallery.html"
+permalinkBypassOutputDir: true
+---
+{% from "macros.njk" import 
+    subheader,
+    hijrnotesSubheader,
+    articleSubheader,
+    subfooter 
+%}
+{{ subheader(
+    'Gallery',
+    'gallery-0',
+    '',
+    'png'
+) }}
+{{ hijrnotesSubheader('welcome to the journey', 'true') }}
+{{ articleSubheader(
+    'Beautiful hampton gallery',
+    'The first inn located in America was recorded in the year 1607 and lead the way with many other firsts in the hospitality industry. The first publicly held hotel (the City Hotel) opened in New York in 1792. ' 
+    ) 
+}}
+
+<section class="segment-outer">
+    <section class="segment-inner">
+        <section class="flex justify-center">
+            <div class="border-b-1 border-jou-main-2">All</div>
+            <div class="ml-8">Hotel</div>
+            <div class="ml-8">Rooms</div>
+            <div class="ml-8">Hamptons</div>
+        </section>
+    </section>
+</section>
+<section class="segment-outer bg-jou-main-3">
+    <section class="segment-inner gallery-image__column py-8 xmed:pb-16">
+        {% for item in imagePanels %}
+            <figure class="inline-block mb-2 px-8 xmed:px-0">
+                <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
+            </figure>
+        {% endfor %}
+    </section>
+</section>
+{{ subfooter() }}
