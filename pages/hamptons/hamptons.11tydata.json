@@ -1,0 +1,28 @@
+{
+    "imagePanels":[
+        {
+            "imageUrl": "images/hamptons-6",
+            "imageAlt": "Rooms",
+            "title": "Rooms",
+            "p1":"55"
+        },
+        {
+            "imageUrl": "images/hamptons-7",
+            "imageAlt": "Restaurents",
+            "title": "Restaurents",
+            "p1":"03"
+        },
+        {
+            "imageUrl": "images/hamptons-8",
+            "imageAlt": "Staffs",
+            "title": "Staffs",
+            "p1":"35"
+        },
+        {
+            "imageUrl": "images/hamptons-9",
+            "imageAlt": "Swim. Pools",
+            "title": "Swim. Pools",
+            "p1":"02"
+        }
+    ]
+}

@@ -9,109 +9,108 @@
 /**** base style additions ****/
 /** https://tailwindcss.com/docs/functions-and-directives#layer **/
 @layer base {
-    @font-face {
-        font-display: swap;
-        font-family: 'Adobe Garamond Pro';
-        src: url('../fonts/AGaramondPro-Regular.otf');
-        font-weight: 400;
-        font-style: normal;
-        unicode-range: U+000-5FF;
-    }
-    @font-face {
-        font-display: swap;
-        font-family: 'Hijrnotes';
-        src: url('../fonts/Hijrnotes.ttf');
-        font-weight: 400;
-        font-style: normal;
-        unicode-range: U+000-5FF;
-    }
+  @font-face {
+    font-display: swap;
+    font-family: "Adobe Garamond Pro";
+    src: url("../fonts/AGaramondPro-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Hijrnotes";
+    src: url("../fonts/Hijrnotes.ttf");
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+000-5FF;
+  }
 }
 
 /****  start base classes  ********************************/
 body {
-    font-size: var(--base-font-size);
-    color: var(--color__primary);
-    @apply font-serif;
+  font-size: var(--base-font-size);
+  color: var(--color__primary);
+  @apply font-serif;
 }
 
 /****  end base classes  ********************************/
 
 /****  start page-header  ********************************/
 .header-link {
-    @apply uppercase;
+  @apply uppercase;
 }
-.header-link--inactive {
-    @apply text-white;
+.header-link--inactive,
+.header-link--active {
+  @apply text-white;
 }
 .page-header__menu li:nth-child(4) {
-    @apply hidden;
+  @apply hidden;
 }
 .page-header__toggle-button::after {
-    @apply border-t-2;
-    @apply border-jou-main-1;
-    @apply block;
-    @apply h-0;
-    @apply left-0;
-    @apply absolute;
-    @apply w-full;
-    content: '';
-    top: 43%;
+  @apply border-t-2;
+  @apply border-jou-main-1;
+  @apply block;
+  @apply h-0;
+  @apply left-0;
+  @apply absolute;
+  @apply w-full;
+  content: "";
+  top: 43%;
 }
-.page-header__toggle:checked ~ .nav-bar .page-header__menu {
-    @apply grid;
+.page-header__toggle:checked ~ .nav-bar .page-header__menu,
+.page-header__toggle:checked ~ .nav-bar .nav_white {
+  @apply grid;
 }
-.page-header__toggle:checked ~ .nav-bar .desktop-menu  {
-    @apply hidden;
+.page-header__toggle:checked ~ .nav-bar .desktop-menu,
+.page-header__toggle:checked ~ .nav-bar .nav_dark {
+  @apply hidden;
 }
-.page-header__toggle:checked ~ .nav-bar .header-link{
-    @apply ml-0;
+.page-header__toggle:checked ~ .nav-bar .header-link {
+  @apply ml-0;
 }
-.page-header__toggle:checked ~ .nav-bar path  {
-    fill: #fbf2ed;
+.page-header__toggle:checked ~ .nav-bar path {
+  fill: #fbf2ed;
 }
-.page-header__toggle:checked ~ .nav-bar{
-    @apply border-0;
+.page-header__toggle:checked ~ .nav-bar {
+  @apply border-0;
 }
 .page-header__toggle:checked ~ .nav-bar label {
-    @apply relative;
-    @apply top-1;
-    @apply transform;
-    @apply rotate-45;
-    @apply border-b-0;
-    @apply border-white;
+  @apply relative;
+  @apply top-1;
+  @apply transform;
+  @apply rotate-45;
+  @apply border-b-0;
+  @apply border-white;
 }
 .page-header__toggle:checked + .nav-bar .page-header__toggle-button::after {
-    @apply transform;
-    @apply rotate-90;
-    @apply border-t-1;
-    @apply border-white;
-    top: -1px;
+  @apply transform;
+  @apply rotate-90;
+  @apply border-t-1;
+  @apply border-white;
+  top: -1px;
 }
 .page-header__toggle:checked + .nav-bar .menu-toggle__border {
-    @apply border-t-1;
+  @apply border-t-1;
 }
-.menu-toggle__border{
-    @apply border-t-2;
-    @apply border-b-2;
+.menu-toggle__border {
+  @apply border-t-2;
+  @apply border-b-2;
 }
 .page-header__toggle:checked + .nav-bar {
-    @apply bg-jou-main;
+  @apply bg-jou-main;
 }
 
 .reserve-btn {
-    @apply w-24;
-    @apply h-24;
-    @apply border-4;
-    @apply border-jou-main;
-    @apply p-1.5;
-    @apply rounded-full;
-    @apply fixed;
-    @apply top-3/4;
-    @apply right-3.5;
-    @apply block;
-    @apply bg-white;
+  height: 101px;
+  width: 101px;
+  @apply rounded-full;
+  @apply fixed;
+  @apply top-3/4;
+  @apply right-3.5;
+  @apply block;
 }
-.reserve-btn > span {
+/* .reserve-btn > span {
     @apply bg-jou-main;
     @apply w-full;
     @apply h-full;
@@ -121,44 +120,57 @@ body {
     @apply items-center;
     @apply justify-center;
     @apply text-base;
-}
+} */
 
 @screen xmed {
-    .page-header__menu li:nth-child(4) {
-        @apply block;
-    }
-    .header-link--inactive {
-        @apply text-jou-main;
-    }
-    .header-link--active {
-        @apply border-b-1;
-        @apply border-vio-1;
-    }
+  .page-header__menu li:nth-child(4) {
+    @apply block;
+  }
+  .header-link--inactive {
+    @apply text-jou-main;
+  }
+  .header-link--active {
+    @apply text-jou-main;
+    @apply border-b-1;
+    @apply border-vio-1;
+  }
 
-    .reserve-btn {
-        @apply top-4;
-        @apply right-16;
-    }
+  .reserve-btn {
+    @apply top-5;
+    @apply right-16;
+  }
 }
 
 /****  end page-header  ********************************/
 
-
 /****  start page-content  ********************************/
 
 .segment-outer {
-    @apply w-full;
-    @apply text-center;
+  @apply w-full;
+  @apply text-center;
 }
 .segment-inner {
-    @apply max-w-jou-desktop;
-    @apply overflow-hidden;
-    @apply mx-auto;
-    @apply text-left;
+  @apply max-w-jou-desktop;
+  @apply overflow-hidden;
+  @apply mx-auto;
+  @apply text-left;
 }
 
 .font-hijrnotes {
-    @apply font-hijr;
+  @apply font-hijr;
+}
+
+.font-paragraph{
+    @apply text-base xmed:text-2xl;
+}
+.button__primary{
+    @apply font-serif;
+    @apply italic;
+    @apply text-base;
+    @apply border;
+    @apply inline;
+    @apply px-6;
+    @apply py-2;
 }
 
 /****  end page-content  ********************************/

@@ -1,7 +1,6 @@
 /****  start imports  ********************************/
 @import "../../styles/global.css";
 /****  end imports  ********************************/
-
 @layer base{
     .central-location__address{
         @apply text-center;

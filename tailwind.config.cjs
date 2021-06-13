@@ -35,13 +35,20 @@ module.exports = {
       },
       maxWidth: {
         'jou-desktop': '1200px',
-        'hero-width': '832px'
+        'hero-width': '832px',
+        'subheader__caption':'19rem'
       },
       borderWidth: {
         '1': '1px',
       },
       width: {
-        '5.5': '1.375rem'
+        '5.5': '1.375rem',
+        '126':'31.5rem'
+      },
+      height:{
+        '15':'60px',
+        '19':'76px',
+        '25':'100px'
       },
       fontFamily: {
         'serif': ['Adobe Garamond Pro', 'serif'],
