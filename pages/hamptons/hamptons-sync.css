@@ -6,7 +6,7 @@
     .central-location__address{
         @apply text-center;
         @apply  px-6 xmed:px-0;
-        @apply xmed:text-2xl;
+        @apply text-base xmed:text-2xl;
      }
     .favourite-foods__address{
         @apply text-center;
