@@ -5,45 +5,21 @@ meta_title: "JOURNEY"
 permalink: "build/hamptons.html"
 permalinkBypassOutputDir: true
 ---
-{% from "macros.njk" import 
-    subheader,
-    hijrnotesSubheader,
-    articleSubheader,
-    subfooter 
-%}
+{% from "macros.njk" import
+subheader,
+hijrnotesSubheader,
+subfooter %}
 <!--starts here-->
-<section class="segment-outer pt-16 xmed:pt-24 mb-12">
-    <section class="segment-inner px-4 pt-4 xmed:pt-16">
-        <figcaption>
-            <h2 class="text-2xl xmed:text-5xl text-center mb-4 xmed:mb-24">
-                Happiest in the Hamptons
-            </h2>
-        </figcaption>
-        <figure class="max-w-hero-width mx-auto">
-            <picture>
-                <source src="images/hamptons-1.webp" type="image/webp" srcset="
-                images/hamptons-1.webp 600w,
-                images/hamptons-1_300.webp 300w
-            ">
-                <img src="images/hamptons-1.jpg" class="inline-block" alt="A hidden gem for the modern explorer" srcset="
-                images/hamptons-1.jpg 600w,
-                images/hamptons-1.jpg 300w
-            ">
-            </picture>
-        </figure>
-        <figcaption>
-            <h1 class="font-hijrnotes mt-4 xmed:mt-12 text-4xl xmed:text-6.5xl text-center">
-                close to it all
-            </h1>
-        </figcaption>
-        <div class="flex justify-center mt-16">
-            <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
-            </svg>
-        </div>
-    </section>
-</section> 
-<!--ends here-->  
+{{
+    subheader(
+       'Happiest in the Hamptons',
+       'hamptons-1',
+       '',
+       'jpg'
+    )
+}}
+{{ hijrnotesSubheader('close to it all', 'true') }}
+<!--ends here-->
 <section class="segment-outer">
     <article class="segment-inner">
         <header>
@@ -51,7 +27,7 @@ permalinkBypassOutputDir: true
                 Centrally located
             </h1>
         </header>
-        <p class="central-location__address my-8 m-auto max-w-lg">Beautiful beaches, good food, with places to see the sea, and experience it all.</p>
+        <p class="central-location__address my-8 m-auto max-w-sm">Beautiful beaches, good food, with places to see the sea, and experience it all.</p>
         <p class="central-location__address">Amagansett - 1 mile</p>
         <p class="central-location__address">East Hampton - 1.6 miles</p>
         <p class="central-location__address">Two Mile Hollow Beach - 1.3 miles</p>
@@ -62,9 +38,9 @@ permalinkBypassOutputDir: true
     <section class="segment-inner my-16">
         <section class="xmed:w-1/2 w-full flex justify-center m-auto">
             {% set mapLink = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42940.37833089746!2d-72.18948562072981!3d40.97197561612336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8ba56e19ce55b%3A0xf987bba265200153!2sMaidstone%20Club!5e0!3m2!1sen!2sbd!4v1622702192721!5m2!1sen!2sbd'%}
-                <object class="block h-80 xmed:h-96 p-0 w-full" data="{{ mapLink }}">
-                    <embed src="{{ mapLink }}"></embed>
-                </object>   
+            <object class="block h-80 xmed:h-96 p-0 w-full" data="{{ mapLink }}">
+                <embed src="{{ mapLink }}"></embed>
+            </object>
         </section>
     </section>
 </section>
