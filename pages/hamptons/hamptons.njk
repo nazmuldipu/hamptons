@@ -5,6 +5,12 @@ meta_title: "JOURNEY"
 permalink: "build/hamptons.html"
 permalinkBypassOutputDir: true
 ---
+{% from "macros.njk" import 
+    subheader,
+    hijrnotesSubheader,
+    articleSubheader,
+    subfooter 
+%}
 <!--starts here-->
 <section class="segment-outer pt-16 xmed:pt-24 mb-12">
     <section class="segment-inner px-4 pt-4 xmed:pt-16">
@@ -62,7 +68,7 @@ permalinkBypassOutputDir: true
         </section>
     </section>
 </section>
-<section class="segment-outer mb-12 xmed:mb-0">
+<section class="segment-outer mb-12 xmed:mb-28">
     <article class="segment-inner">
         <header>
             <h1 class="font-semibold text-2xl xmed:text-4.5xl  mb-6 text-center">
@@ -89,14 +95,4 @@ permalinkBypassOutputDir: true
         </p>
     </article>
 </section>
-<section class="segement-outer hidden xmed:block mt-28 pb-4 mb-4 bg-jou-main-3">
-    <section class="segment-inner">
-        <article class="text-center my-20">
-            <header class="font-hijrnotes text-6.5xl mb-12">
-                <h1>something special for you</h1>
-            </header>
-            <p class="mb-12 text-2xl">Click below to view available offers</p>
-            <a href="#" class="font-serif italic font-bold border text-base border-jou-main inline px-6 py-2">View Offers</a>
-        </article>
-    </section>
-</section>
+{{ subfooter()}}
