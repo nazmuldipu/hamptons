@@ -6,28 +6,247 @@ permalink: "build/index.html"
 permalinkBypassOutputDir: true
 ---
 
-<section class="segment-outer pt-16 xmed:pt-24 pb-10 bg-violet">
-    <div class="segment-inner px-4 pt-4 xmed:pt-16">
-        <h2 class="text-2xl text-center mb-1">A sophisticated, contemporary sanctuary in the Hamptons</h2>
-        <div class="max-w-hero-width mx-auto">
-            <picture>
-                <source src="images/guest-house-library-bar-1.webp" type="image/webp" srcset="
-                    images/guest-house-library-bar-1.webp 900w,
-                    images/guest-house-library-bar-1_640.webp 640w
-                ">
-                <img src="images/guest-house-library-bar-1.png" class="inline-block" alt="Guest House Libraby Bar" srcset="
-                    images/guest-house-library-bar-1.png 900w,
-                    images/guest-house-library-bar-1.png 640w
-                ">
-            </picture>
+{% from "macroSvgs.njk" import leftArrow, rightArrow, star %}
+
+<!-- Content Stylus Head -->
+{% macro stylusHead(text) %}
+<div class="py-3">
+  <div class="home-dialog text-4xl xmed:text-4xl">{{ text }}</div>
+</div>
+{% endmacro %}
+
+<!-- Content Head macro -->
+{% macro h2Head(text, childClass) %}
+<div class="py-3">
+  <h2 class="text-2xl text-center {{ childClass }} ">
+    {{ text }}
+  </h2>
+</div>
+{% endmacro %}
+
+<!-- Reacangle Link -->
+{% macro rectLink(text, link, parentClass, childClass) %}
+<div class="{{ parentClass }}">
+  <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
+</div>
+{% endmacro %}
+
+<!-- Picture macro -->
+{% macro pictureImg(name, parentClass, childClass)%}
+<figure class="{{ parentClass }}">
+  <picture>
+    <source
+      src="images/{{ name }}.webp"
+      type="image/webp"
+      srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
+    />
+    <img
+      src="images/{{ name }}.png"
+      class="{{ childClass }}"
+      alt="{{ name }}"
+      srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
+    />
+  </picture>
+</figure>
+{% endmacro %}
+
+<!-- top banner -->
+<section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
+  {{
+    h2Head(
+      " A sophisticated, contemporary sanctuary in the Hamptons",
+      "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
+    )
+  }}
+
+  <!-- banner image -->
+  {{
+    pictureImg(
+      "guest-house-library-bar-1",
+      "max-w-hero-width mx-auto",
+      "max-w-3xl"
+    )
+  }}
+
+  {{ stylusHead("where travel meets charm") }}
+
+  <div class="grid justify-items-center pt-16">
+    <img src="/images/down_arrow.svg" alt="Down Arrow" />
+  </div>
+</section>
+
+<!-- about  -->
+<section class="mx-auto pt-9 xmed:pt-6 pb-10 bg-violet">
+  {{ h2Head("About the Journey", "xmed:text-4.5xl font-semibold") }}
+
+  <div class="xmed:max-w-4xl text-center text-base px-4 py-5 xmed:mx-auto">
+    22 newly renovated hotel rooms, <br class="sm:hidden" />
+    3 spacious and secluded cottages, a heated <br class="sm:hidden" />
+    saltwater pool with indoor lounge, and only a <br class="sm:hidden" />
+    15-minute walk to Long Island’s finest beaches.
+  </div>
+
+  <div class="xmed:max-w-3xl xmed:mx-auto p-3 grid grid-cols-2 xmed:grid-cols-3 place-content-center">
+    {% set items = [ 1, 2, 3, 4, 5, 6 ] %} {% for item in items %}
+
+    {{ pictureImg("about" + item, "p-1 xmed:p-2", "w-full") }} {% endfor %}
+  </div>
+
+  {{ stylusHead("welcome to the hamptons") }}
+
+  <div class="text-center text-base px-11 py-5">
+    Perfectly situated between the villages of East Hampton and Amagansett
+  </div>
+
+  {{
+    rectLink(
+      "Location",
+      "/location.html",
+      "text-center block my-5",
+      "px-10 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
+</section>
+
+<!-- Room info -->
+<section class="px-5 py-10 xmed:pt-12 bg-vio-2">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 xmed:grid-cols-2">
+    {{ pictureImg("HamptonsKing", "", "w-full") }}
+
+    <div class="pl-0 xmed:pl-14">
+      <div class="grid justify-items-center xmed:justify-items-start pt-10 pb-4">
+        <div>
+          <a class="px-2 inline-block" href="#">{{ leftArrow("#858585") }}</a>
+          <a class="px-2 inline-block" href="#">{{ rightArrow("#858585") }}</a>
         </div>
-        <figcaption>
-            <p class="font-hijrnotes text-4xl text-center">where travel <br class="sm:hidden">meets charm</p>
-        </figcaption>
-        <div class="xmed:hidden flex justify-center mt-1">
-            <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
-            </svg>
+      </div>
+
+      {{
+        h2Head(
+          "Atlantic King Suite",
+          "xmed:text-4.5xl font-semibold xmed:text-left xmed:pt-8"
+        )
+      }}
+
+      <div
+        class="
+          text-center
+          xmed:text-left
+          text-base
+          px-5
+          xmed:pl-0
+          py-5
+          xmed:py-3
+        "
+      >
+        Ideal for a romantic getaway or for a group of 4 that wants to
+        experience the tranquility Journey East Hampton has to offer.
+      </div>
+
+      <div class="grid justify-items-center xmed:justify-items-start my-4">
+        <div>
+          {{
+            rectLink(
+              "View All Rooms",
+              "/rooms.html",
+              "text-center inline-block my-5",
+              "px-4 py-2 italic font-semibold border border-black text-base"
+            )
+          }}
+          {{
+            rectLink(
+              "View Offers",
+              "/offers.html",
+              "text-center inline-block my-5 mx-2",
+              "px-4 py-2 italic font-semibold border border-black text-base"
+            )
+          }}
         </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- Amenities -->
+<section class="px-4 py-10 xmed:pt-24 pb-9 bg-violet">
+  {{ stylusHead("everything for happiness") }}
+
+  {{ h2Head("Amenities", "xmed:text-4.5xl font-semibold ") }}
+
+  {{
+    rectLink(
+      "View Amenities",
+      "/location.html",
+      "hidden xmed:block text-center block my-5",
+      "px-4 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
+  <div class="grid grid-cols-9 xmed:px-64 xmed:justify-items-center">
+    <a class="self-center xmed:mx-14" href="#">{{leftArrow("#858585")}}</a>
+    <div class="col-span-7">
+    {{ pictureImg("bicycle", "w-full xmed:max-w-sm", "w-full") }}
+</div>
+<a class="self-center xmed:mx-14" href="#">{{rightArrow("#858585")}}</a>
+</div>
+{{ stylusHead("the bikes") }}
+
+  
+
+  {{
+    rectLink(
+      "View Amenities",
+      "/location.html",
+      "xmed:hidden text-center block my-5",
+      "px-4 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
+</section>
+
+<!--  line -->
+<div class="px-3 xmed:px-44 bg-violet">
+  <hr />
+</div>
+
+<!-- Review -->
+<section class="px-4 py-10 xmed:pt-24 pb-9 bg-violet">
+  {{ stylusHead("a hidden gem") }}
+
+  {{ h2Head("Outstanding", "xmed:text-4.5xl font-semibold ") }}
+  <div class="grid grid-cols-7 xmed:grid-cols-9 justify-items-center">
+      <a class="hidden xmed:block self-center xmed:mx-14" href="#">{{
+        leftArrow("#858585")
+      }}</a>
+      <div class="col-span-7 text-center text-base w-full xmed:max-w-3xl">
+        “Great boutique hotel. Room was very clean Nice decor Erica took good
+        care of us Breakfast was delicious and food was healthy and high quality
+        Property is well maintained Looking forward to stay there again ”
+      </div>
+
+      <a class="hidden xmed:block self-center xmed:mx-14" href="#">
+        {{ rightArrow("#858585") }}
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center pt-8 pb-6">
+    <div class="grid justify-items-center">
+      {% set stars = [1, 2, 3, 4, 5] %}
+      <div> 
+      {% for s in stars %}
+      <div class="inline-block">
+      {{ star() }}
+    </div>
+      {% endfor %}
+    </div>
+    </div>
+    <div>Summy Nimble, UK</div>
+    <div class="italic underline py-4">#1 hotel in East Hampton</div>
+  </div>
+
+  <div class="grid justify-items-center pb-8 xmed:hidden">
+      <div>
+    <a class="px-2 inline-block" href="#">{{ leftArrow() }}</a>
+    <a class="px-2 inline-block" href="#">{{ rightArrow() }}</a>
+</div>
+  </div>
 </section>
