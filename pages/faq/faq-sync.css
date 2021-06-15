@@ -62,4 +62,5 @@
   .toggleable__control:checked ~ .toggleable__label::after {
     content: "- ";
   }
+
 }
