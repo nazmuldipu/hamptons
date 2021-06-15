@@ -6,94 +6,73 @@ permalink: "build/faq.html"
 permalinkBypassOutputDir: true
 ---
 
-<!-- Content Stylus Head -->
-{% macro stylusHead(text, childClass="text-start") %}
-    <div class="py-3">
-        <div class="home-dialog text-4xl {{childClass}}">{{ text }}</div>
-    </div>
-{% endmacro %}
-
-<!-- Content Head macro -->
-{% macro h2Head(text, childClass) %}
-    <div class="py-3">
-        <h2 class="text-2xl text-center {{ childClass }} ">
-            {{ text }}
-        </h2>
-    </div>
-{% endmacro %}
-
-<!-- Reacangle Link -->
-{% macro rectLink(text, link, parentClass, childClass) %}
-    <div class="{{ parentClass }}">
-        <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
-    </div>
-{% endmacro %}
-
-<!-- Picture macro -->
-{% macro pictureImg(name, parentClass, childClass)%}
-    <picture class="{{parentClass}}">
-        <source
-      src="images/{{name}}.webp"
-      type="image/webp"
-      srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
-/>
-        <img
-      src="images/{{name}}.png"
-      class="{{childClass}}"
-      alt="{{name}}"
-      srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
-/>
-    </picture>
-</picture>
-{% endmacro %}
+{% from "macros.njk" import stylusHead, h2Head, rectLink, pictureImg %}
 
 <!-- top banner -->
 <section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
-{{
+  {{
     h2Head(
       "Frequently asked questions",
       "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
     )
   }}
 
-<div>
-    {{ pictureImg("Journeyhallwayoutside", 'max-w-hero-width', 'mx-auto max-w-3xl') }}
-</div>
+  {{
+    pictureImg("Journeyhallwayoutside", "max-w-hero-width", "mx-auto max-w-3xl")
+  }}
 
-{{ stylusHead("just ask", "text-center text-4xl xmed:text-6.5xl") }}
-<div class="grid justify-items-center pt-16">
+  {{ stylusHead("just ask", "text-center text-4xl xmed:text-6.5xl") }}
+
+  <div class="grid justify-items-center pt-16">
     <img src="/images/down_arrow.svg" alt="Down Arrow" />
   </div>
 </section>
 
+<!-- FAQs -->
 <section class="px-4 xmed:px-60 pt-10 xmed:pt-20 pb-9 bg-violet">
-{% for faq in faqs %}
-    <div class="toggleable">
-        <input class="toggleable__control hidden--visually" id="{{faq.question}}" type="checkbox"/>
-        <label class="toggleable__label text-base xmed:text-2xl"  for="{{faq.question}}">
-            {{faq.question}}
-        </label>
-        <div class="toggleable__content">
-        <div class="pb-4 border-l-2 border-blue-900 pl-2 xmed:pl-8 my-2 xmed:my-4">
-        {{faq.answer}}
-        </div>
-        </div>
+  {% for faq in faqs %}
+  <div class="toggleable">
+    <input
+      class="toggleable__control hidden--visually"
+      id="{{ faq.question }}"
+      type="checkbox"
+    />
+    <label
+      class="toggleable__label text-base xmed:text-2xl"
+      for="{{ faq.question }}"
+    >
+      {{ faq.question }}
+    </label>
+    <div class="toggleable__content">
+      <div
+        class="pb-4 border-l-2 border-blue-900 pl-2 xmed:pl-8 my-2 xmed:my-4"
+      >
+        {{ faq.answer }}
+      </div>
     </div>
-{% endfor %}
-
+  </div>
+  {% endfor %}
 </section>
 
+<!-- Special offers -->
 <section class="mx-auto py-10 bg-vio-2">
-{{ stylusHead("something special for you", "text-center text-4xl xmed:text-6.5xl") }}
+  {{
+    stylusHead(
+      "something special for you",
+      "text-center text-4xl xmed:text-6.5xl"
+    )
+  }}
 
-<p class="text-base xmed:text-2xl py-8 text-center">Click below to view available offers</p>
+  <p class="text-base xmed:text-2xl py-8 text-center">
+    Click below to view available offers
+  </p>
 
-{{
-        rectLink(
-          "View Offers",
-          "/offers.html",
-          "text-center block my-5",
-          "px-10 py-2 italic font-semibold border border-black text-base"
-        )
-      }}
+  {{
+    rectLink(
+      "View Offers",
+      "/offers.html",
+      "text-center block my-5",
+      "px-10 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
 </section>

@@ -114,3 +114,27 @@
         </section>
     </section>
 {% endmacro %}
+
+<!-- Content Stylus Head -->
+{% macro stylusHead(text, childClass="text-start") %}
+<div class="py-3">
+  <div class="home-dialog text-4xl {{ childClass }}">{{ text }}</div>
+</div>
+{% endmacro %}
+
+<!-- Content Head macro -->
+{% macro h2Head(text, childClass) %}
+<div class="py-3">
+  <h2 class="text-2xl text-center {{ childClass }} ">
+    {{ text }}
+  </h2>
+</div>
+{% endmacro %}
+
+<!-- Reacangle Link -->
+{% macro rectLink(text, link, parentClass, childClass) %}
+<div class="{{ parentClass }}">
+  <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
+</div>
+{% endmacro %}
+
