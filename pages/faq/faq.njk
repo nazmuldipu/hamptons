@@ -31,7 +31,7 @@ permalinkBypassOutputDir: true
 <!-- FAQs -->
 <section class="px-4 xmed:px-60 pt-10 xmed:pt-20 pb-9 bg-violet">
   {% for faq in faqs %}
-  <div class="toggleable">
+  <div class="toggleable border-b-2 border-jou-main-2">
     <input
       class="toggleable__control hidden--visually"
       id="{{ faq.question }}"
@@ -45,7 +45,7 @@ permalinkBypassOutputDir: true
     </label>
     <div class="toggleable__content">
       <div
-        class="pb-4 border-l-2 border-blue-900 pl-2 xmed:pl-8 my-2 xmed:my-4"
+        class="pb-4 border-l-2 xmed:border-l-4 border-jou-main pl-2 xmed:pl-8 my-2 xmed:my-4"
       >
         {{ faq.answer }}
       </div>

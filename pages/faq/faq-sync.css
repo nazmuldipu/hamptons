@@ -38,10 +38,6 @@
     width: 1px;
   }
 
-  .toggleable {
-    border-bottom: 2px solid #dbc8b6;
-  }
-
   .toggleable__label {
     display: block;
     display: flex;
