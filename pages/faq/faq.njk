@@ -1,0 +1,97 @@
+---
+layout: base.njk
+pagename: faq
+meta_title: "JOURNEY"
+permalink: "build/faq.html"
+permalinkBypassOutputDir: true
+---
+
+{% from "macros.njk" import stylusHead, h2Head, rectLink, pictureImg %}
+
+<!-- top banner -->
+<section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
+  {{
+    h2Head(
+      "Frequently asked questions",
+      "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
+    )
+  }}
+
+  {{
+    pictureImg("Journeyhallwayoutside", "max-w-hero-width", "mx-auto max-w-3xl")
+  }}
+
+  {{ stylusHead("just ask", "text-center text-4xl xmed:text-6.5xl") }}
+
+  <div class="grid justify-items-center pt-16">
+    <img src="/images/down_arrow.svg" alt="Down Arrow" />
+  </div>
+</section>
+
+<!-- FAQs -->
+<section class="px-4 xmed:px-60 pt-10 xmed:pt-20 pb-9 bg-violet">
+  {% for faq in faqs %}
+  <div class="toggleable border-b-2 border-jou-main-2">
+    <input
+      class="toggleable__control absolute hidden--visually border-0 h-px -m-px overflow-hidden p-0 w-px"
+      id="{{ faq.question }}"
+      type="checkbox"
+    />
+
+    <label
+      class="
+        toggleable__label
+        text-base
+        flex
+        justify-between
+        xmed:text-2xl
+        items-center
+        py-2
+        cursor-pointer
+      "
+      for="{{ faq.question }}"
+    >
+      {{ faq.question }}
+    </label>
+    <div class="toggleable__content max-h-0 overflow-hidden">
+      <div
+        class="
+          pb-4
+          border-l-2
+          xmed:border-l-4
+          border-jou-main
+          pl-2
+          xmed:pl-8
+          my-2
+          xmed:my-4
+        "
+      >
+        {{ faq.answer }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- Special offers -->
+<section class="mx-auto py-10 bg-vio-2">
+  {{
+    stylusHead(
+      "something special for you",
+      "text-center text-4xl xmed:text-6.5xl"
+    )
+  }}
+
+  <p class="text-base xmed:text-2xl py-8 text-center">
+    Click below to view available offers
+  </p>
+
+  {{
+    rectLink(
+      "View Offers",
+      "/offers.html",
+      "text-center block my-5",
+      "px-10 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
+</section>

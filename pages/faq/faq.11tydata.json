@@ -1,0 +1,73 @@
+{
+  "faqs": [
+    { "question": "Front Desk/Concierge Hours:", "answer": "Open 9 am - 8 pm" },
+    {
+      "question": "Check In/Checkout for hotel guests:",
+      "answer": "Journey check-in time is 4:00 pm, and check out time is 11:00 am. The hotel will make every effort to personalize our guests' stays if provided ETA information at time of reservation. Late checkout requests are subject to the hotel’s occupancy and can be requested through our front desk only. Additional charges may apply.  "
+    },
+    {
+      "question": "Minimum Age Requirements:",
+      "answer": "You must be 21 years or older to be able to check-in. A Valid picture ID and a valid method of payment is required. The credit card holder must be present at time of check in."
+    },
+    {
+      "question": "Cancellation Policy:",
+      "answer": "From May 25th through October 30th, cancel by 4pm local hotel time, at least 30 (thirty) days prior to the arrival date on the reservation to avoid a penalty charge equal to 100% of the entire stay, including taxes and hotel resort fee; non-refundable. Cancellations received prior to the 30 days period will incur a one-time cancellation fee of $50.00 to be assessed to the credit card on file."
+    },
+    {
+      "question": "Off Season Policy:",
+      "answer": "Cancel by 4pm local hotel time, at least 14 (fourteen) days prior to the arrival date on the reservation to avoid a charge equal to a 100% of the first night, including taxes and hotel resort fee. Cancellations received prior to the 14 days period will incur a one-time cancellation fee of $25.00 to be assessed to the credit card on file."
+    },
+    {
+      "question": "Deposit/Guarantee:",
+      "answer": "All reservations must be guaranteed for arrival with a valid major credit card with expiration date.  The hotel will charge the card on file following our “Hotel Guarantee Policies” which states that for any reservations booked with arrival date from May 25th through October 30th, a full amount of the entire guest’s stay including taxes and resort fees will be placed on the card on file. On the event that the card on file does not go through with the mentioned charges above, the hotel reserves the right to automatically cancel the reservation without further notice to the guest. The hotel will not hold any reservation unless secured by the above methods. Upon check in; guests may use another form of acceptable payment for their accommodations."
+    },
+    {
+      "question": "Off Season:",
+      "answer": "The total of the first night room, taxes and resort fees will be required for the hotel to guarantee the reservation. On the event that the hotel is unable to obtain a charge equal to the first night, room & taxes and resort fees on the card on file, the hotel will reserve the right to cancel the reservation without further notice to the guest. "
+    },
+    {
+      "question": "Smoking Policy:",
+      "answer": "Journey East Hampton is a 100% non-smoking facility. Smoking is not permitted anywhere within the hotel facility, including public areas. Should it be determined that smoking has taken place in a guestroom, the hotel will charge a $250.00 non-refundable cleaning fee, placed on the guest folio before or after check-out."
+    },
+    {
+      "question": "Pet Policy:",
+      "answer": "No pets allowed except for service animals. Please advise when making a reservation if bringing a guide dog or service animal into the hotel so we may prepare for arrival accordingly."
+    },
+    {
+      "question": "Extra Person Fee:",
+      "answer": "Room rates are listed for single / double occupancy. Additional adults sharing a room will incur a charge of $25 per night, per person, up to four in a room."
+    },
+    {
+      "question": "ADA Policy:",
+      "answer": "Journey East Hampton is 100% compliant with the American’s With Disabilities Act (ADA). We offer 1 accessible room at the hotel. Please ensure requests reach us by placing it in the comments section of the online reservation form, or by calling us directly at 631-324-4550 after the reservation has been made."
+    },
+    {
+      "question": "Roll Away Beds Request:",
+      "answer": "Roll Away beds are not available at Journey, all our Atlantic King Suites have Sofa Sleepers as do our Cottages. "
+    },
+    {
+      "question": "Children’s Policy:",
+      "answer": "Children 12 and under are free if using existing bedding."
+    },
+    {
+      "question": "Fees, Taxes & Service:",
+      "answer": " 11.625% state, city & occupancy tax per night are required year-round. A nightly resort fee of $50.00 during high season will apply to all reservations, and  $25.00 nightly resort fee during off season will apply to all reservations."
+    },
+    {
+      "question": "Hotel Guarantee Policy:",
+      "answer": "For guest accommodations to be confirmed, at the time of check in, sufficient credit credentials for payment of accommodations must be provided through the authorization of a debit or credit card. When a debit or credit card is presented for authorization, please be advised that a credit hold in the amount of guest room charges, applicable taxes and a provision for incidental charges will be placed on the banking account. Cash payment upon check out is currently not acceptable.  "
+    },
+    {
+      "question": "Accepted Methods of Payment:",
+      "answer": "Master Card, Visa, American Express, Discover Card "
+    },
+    {
+      "question": "Heated Saltwater Pool:",
+      "answer": "The heated saltwater swimming pool is located behind the lobby. In season, the pool is open daily, weather permitting.  *Seasonal. End of April through November, dates may vary. No lifeguard is on duty. Children under the age of 16 must be accompanied by an adult. "
+    },
+    {
+      "question": "Hotel Bikes:",
+      "answer": " Journey bikes are complimentary to hotel guests. Please see the front desk for assistance. Children under the age of 16 must be accompanied by an adult."
+    }
+  ]
+}
