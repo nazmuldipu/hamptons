@@ -33,19 +33,38 @@ permalinkBypassOutputDir: true
   {% for faq in faqs %}
   <div class="toggleable border-b-2 border-jou-main-2">
     <input
-      class="toggleable__control hidden--visually"
+      class="toggleable__control absolute hidden--visually border-0 h-px -m-px overflow-hidden p-0 w-px"
       id="{{ faq.question }}"
       type="checkbox"
     />
+
     <label
-      class="toggleable__label text-base xmed:text-2xl"
+      class="
+        toggleable__label
+        text-base
+        flex
+        justify-between
+        xmed:text-2xl
+        items-center
+        py-2
+        cursor-pointer
+      "
       for="{{ faq.question }}"
     >
       {{ faq.question }}
     </label>
-    <div class="toggleable__content">
+    <div class="toggleable__content max-h-0 overflow-hidden">
       <div
-        class="pb-4 border-l-2 xmed:border-l-4 border-jou-main pl-2 xmed:pl-8 my-2 xmed:my-4"
+        class="
+          pb-4
+          border-l-2
+          xmed:border-l-4
+          border-jou-main
+          pl-2
+          xmed:pl-8
+          my-2
+          xmed:my-4
+        "
       >
         {{ faq.answer }}
       </div>
@@ -76,4 +95,3 @@ permalinkBypassOutputDir: true
     )
   }}
 </section>
-
