@@ -1,0 +1,173 @@
+---
+layout: base.njk
+pagename: rooms
+meta_title: "JOURNEY"
+permalink: "build/rooms.html"
+permalinkBypassOutputDir: true
+---
+{% from "macroSvgs.njk" import leftArrow, rightArrow, star %}
+
+<!-- Content Stylus Head -->
+{% macro stylusHead(text, childClass="text-left") %}
+<div class="py-3">
+  <div
+    class="font-hijrnotes font-normal not-italic leading-8 py-1 px-6 text-center text-jou-main-1 tracking-tighter text-4xl {{
+      childClass
+    }}"
+  >
+    {{ text }}
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Content Head macro -->
+{% macro h2Head(text, childClass) %}
+<div class="py-3">
+  <h2 class="text-2xl text-center {{ childClass }} ">
+    {{ text }}
+  </h2>
+</div>
+{% endmacro %}
+
+<!-- Reacangle Link -->
+{% macro rectLink(text, link, parentClass, childClass) %}
+<div class="{{ parentClass }}">
+  <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
+</div>
+{% endmacro %}
+
+<!-- Picture macro -->
+{% macro pictureImg(name, parentClass, childClass)%}
+<picture class="{{ parentClass }}">
+  <source
+    src="images/{{ name }}.webp"
+    type="image/webp"
+    srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
+  />
+  <img
+    src="images/{{ name }}.png"
+    class="{{ childClass }}"
+    alt="{{ name }}"
+    srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
+  />
+</picture>
+{% endmacro %}
+
+<!-- top banner -->
+<section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
+  {{
+    h2Head(
+      " Your boutique home away from home",
+      "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
+    )
+  }}
+
+  {{ pictureImg("rooms", "max-w-hero-width", "mx-auto max-w-3xl") }}
+
+  {{ stylusHead("feels like home", "text-center  xmed:text-6.5xl") }}
+
+  <div class="grid justify-items-center pt-16">
+    <img src="/images/down_arrow.svg" alt="Down Arrow" />
+  </div>
+</section>
+
+<section
+  class="mx-auto pt-5 xmed:pt-6 px-7 xmed:px-36 lg:px-60 pb-10 bg-violet"
+>
+  <div class="grid grid-cols-1 xmed:grid-cols-2 gap-2">
+    <div class="xmed:hidden">
+      {{ h2Head("Our rooms feature:", "font-semibold") }}
+    </div>
+    <div class="hidden xmed:block">
+      {{ pictureImg("v-bed", "max-w-hero-width", "w-full") }}
+    </div>
+    <div class="xmed:pl-12">
+      {% for feature in features %}
+      {{ stylusHead(feature.title, "text-center xmed:text-left") }}
+      <p
+        class="
+          text-base text-center
+          xmed:text-left xmed:text-2xl
+          xmed:pl-6
+          pb-10
+        "
+      >
+        {{ feature.text }}
+      </p>
+      {% endfor %}
+    </div>
+    <div class="xmed:hidden">
+      {{ pictureImg("v-bed", "max-w-hero-width", "w-full") }}
+    </div>
+  </div>
+</section>
+
+<section
+  class="mx-auto pt-9 xmed:pt-6 px-0 xmed:px-36 lg:px-60 pb-10 bg-violet"
+>
+  {{ h2Head("Our cozy rooms", "xmed:text-4.5xl  font-semibold") }}
+  <div class="text-center text-2xl pt-4 pb-3 xmed:pb-16 px-4">
+    A perfect balance of charm and luxury. Enjoy our collection of elegant rooms
+    filled with comfort and contemporary style.
+  </div>
+
+  {% for room in cozy_rooms %}
+  <div class="grid grid-cols-1 xmed:grid-cols-5 gap-4 pb-14">
+    <div class="xmed:col-span-3">
+      {{ pictureImg(room.image, "max-w-hero-width", "w-full") }}
+      <div
+        class="
+          px-4
+          -mt-32
+          sm:-mt-56
+          xmed:-mt-40
+          mar-tablet:-mt-52
+          xl:-mt-54
+          xmed:px-5
+          grid grid-cols-2
+        "
+      >
+        <div class="">
+          <a class="inline-block bg-gray-100 bg-opacity-75" href="#">{{
+            leftArrow("jou-main-1")
+          }}</a>
+        </div>
+        <div class="place-self-end">
+          <a class="inline-block bg-gray-100 bg-opacity-75" href="#">{{
+            rightArrow("jou-main-1")
+          }}</a>
+        </div>
+      </div>
+      <div class="mb-32 sm:mb-56 xmed:mb-28 mar-tablet:mb-52 xl:mb-56"></div>
+    </div>
+
+    <div class="xmed:col-span-2">
+      {{ stylusHead(room.title) }}
+      <p class="text-base xmed:text-2xl pl-6 pb-4">{{ room.text }}</p>
+      <p class="text-2xl pl-6 pb-3">Room Details</p>
+      <ul class="pl-12 list-disc">
+        {% for detail in room.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="mx-auto py-10 bg-vio-2">
+  {{ stylusHead("something special for you", "text-center large") }}
+
+  <p class="text-base xmed:text-2xl py-8 text-center">
+    Click below to view available offers
+  </p>
+
+  {{
+    rectLink(
+      "View Offers",
+      "/offers.html",
+      "text-center block my-5",
+      "px-10 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
+</section>
