@@ -1,8 +1,8 @@
 {% from "macros.njk" import showLogo,
 pictureImg %}
-<footer class="segment-outer bg-jou-main text-grey px-4 py-11 xmed:p-11">
-  <div class="grid grid-cols-12 gap-3 text-left">
-    <div class="col-span-12 xmed:col-span-7 xmed:pl-20">
+<footer class="segment-outer bg-jou-main text-grey py-11">
+  <div class="grid grid-cols-12 gap-3 text-left px-8 xmed:px-16">
+    <div class="col-span-12 xmed:col-span-7">
       <div class="grid justify-items-center xmed:justify-items-start">
         <img
           class="h-15 xmed:h-19"
@@ -10,7 +10,7 @@ pictureImg %}
           alt="Reserve"
 />
       </div>
-      <div class="grid grid-cols-7 gap-3 mt-7 xmed:mt-20 xmed:pl-3">
+      <div class="grid grid-cols-7 gap-3 mt-7 xmed:mt-20">
         <div class="xmed:hidden col-span-7">
           {{ pictureImg("journey-map", "", "w-full") }}
         </div>
@@ -100,12 +100,12 @@ pictureImg %}
     </ul>
   </div>
 
-  <hr class="my-6 border border-jou-main-4"/>
+  <hr class="my-6 mx-7 xmed:mx-12 border border-jou-main-4"/>
 
-  <div class="grid grid-cols-1 xmed:grid-cols-2 items-center px-4 xmed:px-28">
+  <div class="grid grid-cols-1 xmed:grid-cols-2 items-center px-8 xmed:px-16">
     <div class="grid justify-items-start">
       <div>
-        <span class="inline mr-2 text-base font-light">Powered by</span>
+        <span class="inline mr-2 text-base text-jou-main-4">Powered by</span>
         <img class="inline" src="/images/skipper_logo.svg" alt="Skipper"/>
       </div>
     </div>
