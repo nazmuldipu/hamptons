@@ -10,7 +10,7 @@
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-grey",
+            "backgroundColor": "bg-violet",
             "imageUrl": "images/amenities-3",
             "imageAlt": "The lawn",
             "figureOrder": "order-2",
@@ -28,7 +28,7 @@
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "bg-violet",
             "imageUrl": "images/amenities-5",
             "imageAlt": "The lobby",
             "figureOrder": "order-2",
