@@ -52,8 +52,8 @@ permalinkBypassOutputDir: true
     </section>
 
     {% for item in imagePanels %}
-        <section class="segment-outer segment-outer__image-panel">
-            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 xmed:px-16 items-center {{ item.backgroundColor }}">
+        <section class="segment-outer {{ item.backgroundColor }}">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 xmed:px-16 items-center">
                 <figure class="xmed:justify-end {{ item.figureOrder }}">
                     <picture>
                         <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
@@ -74,13 +74,13 @@ permalinkBypassOutputDir: true
     {% endfor %}
 </section>
 
-<section class="segement-outer">
+<section class="segement-outer bg-jou-main-3">
     <section class="segment-inner">
-        <article class="text-center mb-8 mt-16">
-            <header class="font-hijrnotes text-6xl mb-6">
+        <article class="text-center my-16">
+            <header class="font-hijrnotes text-4xl xmed:text-6.5xl mb-6">
                 <h1>something special for you</h1>
             </header>
-            <p class="mb-6">Click below to view available offers</p>
+            <p class="mb-6 text-base xmed:text-2xl">Click below to view available offers</p>
             <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
         </article>
     </section>
