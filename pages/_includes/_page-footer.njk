@@ -1,4 +1,5 @@
-{% from "macros.njk" import showLogo, pictureImg %}
+{% from "macros.njk" import showLogo,
+pictureImg %}
 <footer class="segment-outer bg-jou-main text-grey px-4 py-11 xmed:p-11">
   <div class="grid grid-cols-12 gap-3 text-left">
     <div class="col-span-12 xmed:col-span-7 xmed:pl-20">
@@ -7,7 +8,7 @@
           class="h-15 xmed:h-19"
           src="/images/logo_sign_dark.svg"
           alt="Reserve"
-        />
+/>
       </div>
       <div class="grid grid-cols-7 gap-3 mt-7 xmed:mt-20 xmed:pl-3">
         <div class="xmed:hidden col-span-7">
@@ -15,14 +16,14 @@
         </div>
         <div class="col-span-7 xmed:col-span-3">
           <nav class="mt-8 xmed:mt-0">
-            <h3 class="text-xl text-center xmed:text-2xl xmed:mb-6">
+            <h3 class="text-xl text-left xmed:text-2xl xmed:mb-6">
               <span class="xmed:hidden">The Property</span>
               <span class="hidden xmed:block">Site map</span>
             </h3>
             <div
               class="
                 px-20
-                xmed:px-4
+                xmed:px-0
                 grid grid-cols-2
                 gap-4
                 justify-item-center
@@ -32,12 +33,15 @@
               "
             >
               <ul>
-                {% if data.nav_menu %} {% for nav in data.nav_menu %} {% if
-                (nav.footer) %}
-                <li class="mb-2 xmed:mb-3">
-                  <a href="{{ nav.href }}">{{ nav.name }}</a>
-                </li>
-                {% endif %} {% endfor %} {% endif %}
+                {% if data.nav_menu %}
+                  {% for nav in data.nav_menu %}
+                    {% if (nav.footer) %}
+                      <li class="mb-2 xmed:mb-3">
+                        <a href="{{ nav.href }}">{{ nav.name }}</a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
               </ul>
               <ul>
                 <li class="mb-2 xmed:mb-3">
@@ -87,32 +91,32 @@
       }} gap-2 justify-self-center"
     >
       {% for social in data.social_media %}
-      <li>
-        <a href="{{ social.href }}" target="_blank">
-          <img src="/images/{{ social.name }}.svg" alt="{{ social.name }}" />
-        </a>
-      </li>
+        <li>
+          <a href="{{ social.href }}" target="_blank">
+            <img src="/images/{{ social.name }}.svg" alt="{{ social.name }}"/>
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </div>
 
-  <hr class="my-6" />
+  <hr class="my-6 border border-jou-main-4"/>
 
   <div class="grid grid-cols-1 xmed:grid-cols-2 items-center px-4 xmed:px-28">
     <div class="grid justify-items-start">
       <div>
         <span class="inline mr-2 text-base font-light">Powered by</span>
-        <img class="inline" src="/images/skipper_logo.svg" alt="Skipper" />
+        <img class="inline" src="/images/skipper_logo.svg" alt="Skipper"/>
       </div>
     </div>
     <div class="hidden xmed:grid justify-items-end">
       <ul class="grid grid-cols-{{ data.social_media.length }} gap-2">
         {% for social in data.social_media %}
-        <li>
-          <a href="{{ social.href }}" target="_blanck">
-            <img src="/images/{{ social.name }}.svg" alt="{{ social.name }}" />
-          </a>
-        </li>
+          <li>
+            <a href="{{ social.href }}" target="_blanck">
+              <img src="/images/{{ social.name }}.svg" alt="{{ social.name }}"/>
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </div>
