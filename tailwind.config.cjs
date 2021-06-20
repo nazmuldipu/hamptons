@@ -32,7 +32,8 @@ module.exports = {
         "vio-2": "#EEE5DC",
       },
       maxWidth: {
-        "jou-desktop": "1200px",
+        "jou-tablet": "1200px",
+        "jou-desktop": "2600px",
         "hero-width": "832px",
         subheader__caption: "19rem",
       },
