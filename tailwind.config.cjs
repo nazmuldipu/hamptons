@@ -60,7 +60,7 @@ module.exports = {
       gridTemplateColumns: {
         "3-min-min": "repeat(3, min-content)",
         "50-40-40": "1.5fr 1fr 1fr",
-        "2-max-max": "max-content max-content",
+        "2-max-max": "repeat(2, max-content)",
       },
     },
   },
