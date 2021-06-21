@@ -7,7 +7,48 @@ permalinkBypassOutputDir: true
 ---
 
 {% from "macroSvgs.njk" import leftArrow, rightArrow, star %}
-{% from "macros.njk" import pictureImg, stylusHead, h2Head, rectLink %}
+
+<!-- Content Stylus Head -->
+{% macro stylusHead(text) %}
+<div class="py-3">
+  <div class="home-dialog text-4xl xmed:text-4xl">{{ text }}</div>
+</div>
+{% endmacro %}
+
+<!-- Content Head macro -->
+{% macro h2Head(text, childClass) %}
+<div class="py-3">
+  <h2 class="text-2xl text-center {{ childClass }} ">
+    {{ text }}
+  </h2>
+</div>
+{% endmacro %}
+
+<!-- Reacangle Link -->
+{% macro rectLink(text, link, parentClass, childClass) %}
+<div class="{{ parentClass }}">
+  <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
+</div>
+{% endmacro %}
+
+<!-- Picture macro -->
+{% macro pictureImg(name, parentClass, childClass)%}
+<figure class="{{ parentClass }}">
+  <picture>
+    <source
+      src="images/{{ name }}.webp"
+      type="image/webp"
+      srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
+    />
+    <img
+      src="images/{{ name }}.png"
+      class="{{ childClass }}"
+      alt="{{ name }}"
+      srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
+    />
+  </picture>
+</figure>
+{% endmacro %}
 
 <!-- top banner -->
 <section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
@@ -23,7 +64,7 @@ permalinkBypassOutputDir: true
     pictureImg(
       "homepage-1",
       "max-w-hero-width mx-auto",
-      "max-w-3xl mx-auto"
+      "max-w-3xl"
     )
   }}
 
@@ -70,20 +111,13 @@ permalinkBypassOutputDir: true
 <!-- Room info -->
 <section class="px-5 py-10 xmed:pt-12 bg-vio-2">
   <div class="max-w-5xl mx-auto grid grid-cols-1 xmed:grid-cols-2">
-    {# {{ pictureImg("homepage-8", "", "w-full") }} #}
-    
-    <div class="overflow-hidden relative min-h-15.5h">
-      {{ pictureImg("room0", "absolute", "room-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0") }}
-      {{ pictureImg("room1", "absolute", "room-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0") }}
-      {{ pictureImg("room2", "absolute", "room-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0") }}
-      {{ pictureImg("room3", "absolute", "room-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0") }}
-      {{ pictureImg("room4", "absolute", "room-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0") }}
-    </div>
+    {{ pictureImg("homepage-8", "", "w-full") }}
+
     <div class="pl-0 xmed:pl-14">
       <div class="grid justify-items-center xmed:justify-items-start pt-10 pb-4">
         <div>
-          <div class="px-2 inline-block cursor-pointer" id="room-carouel-prev">{{ leftArrow("nav-arrow", true) }}</div>
-          <div class="px-2 inline-block cursor-pointer" id="room-carouel-next">{{ rightArrow("nav-arrow", true) }}</div>
+          <a class="px-2 inline-block" href="#">{{ leftArrow("#858585") }}</a>
+          <a class="px-2 inline-block" href="#">{{ rightArrow("#858585") }}</a>
         </div>
       </div>
 
