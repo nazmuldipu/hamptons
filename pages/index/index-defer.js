@@ -85,3 +85,4 @@ function carouel_slide(className) {
 }
 
 carouel_slide("room-carouel");
+carouel_slide("comments-carouel");

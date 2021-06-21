@@ -1,34 +1,39 @@
 {
-  "slides": [
+  "comments": [
     {
-      "image": "images/room1",
-      "imgtype": "jpg",
-      "imgalt": "About Image",
-      "intrinsicwidth": "1920"
+      "title": "Beautiful Resort",
+      "rate": 5,
+      "name": "Scott Friedmann",
+      "address": "Madison, New Jersey",
+      "comments": "So well designed and laid out, such a beautiful property. Excellent and friendly staff, who go above and beyond. Extremely clean and careful regarding covid precautions, with limits on guest in the lobby, spaced out rooms, strict cleaning measures, and masks worn at all times."
     },
     {
-      "image": "images/room2",
-      "imgtype": "jpg",
-      "imgalt": "About Image",
-      "intrinsicwidth": "1920"
+      "title": "Lovely Hotel, Very Comfortable Stay",
+      "rate": 5,
+      "name": "Steven ",
+      "address": "USA",
+      "comments": "The facility is wonderfully decorated. The room is extremely comfortable especially the bed & linen used.The staff is very friendly and eager to help with suggesting things to do and places to eat. Renting a free bike to cruise to the beach was a bonus. Would highly recommend Journey for my next stay at the Hamptons."
     },
     {
-      "image": "images/room3",
-      "imgtype": "jpg",
-      "imgalt": "About Image",
-      "intrinsicwidth": "1920"
+      "title": "Getaway",
+      "rate": 5,
+      "name": "Griff",
+      "address": "Long Beach, New York",
+      "comments": "Always great trip , rooms are spotless and safe and staff beyond friendly Great location from beach and town and quick zip to Montauk , pool is always spotless and quiet and relaxing highly recommend this East Hampton gem."
     },
     {
-      "image": "images/room4",
-      "imgtype": "jpg",
-      "imgalt": "About Image",
-      "intrinsicwidth": "1920"
+      "title": "Stunning East Hampton Oasis",
+      "rate": 5,
+      "name": "Martin",
+      "address": "Jersey City, New Jersey",
+      "comments": "I love this little hotel in the heart of East Hampton. The rooms are magnificent along with the service and amenities. We love the calm vibe and aesthetic along with the entire staff. Walkable and highly recommend!"
     },
     {
-      "image": "images/room5",
-      "imgtype": "jpg",
-      "imgalt": "About Image",
-      "intrinsicwidth": "1920"
+      "title": "Classic Hamptons, Modern Finishes",
+      "rate": 5,
+      "name": "No name",
+      "address": "No location",
+      "comments": "Journey is a beautifully renovated hotel with modern fixtures and finishes. The room was clean and new. The staff very helpful and they offered breakfast and bikes to ride to the beach. I would stay there again and recommend it to anyone looking to be on the border of East Hampton"
     }
   ]
 }
