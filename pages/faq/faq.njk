@@ -21,11 +21,15 @@ permalinkBypassOutputDir: true
     pictureImg("Journeyhallwayoutside", "max-w-hero-width", "mx-auto max-w-3xl")
   }}
 
-  {{ stylusHead("just ask", "text-center text-4xl xmed:text-6.5xl") }}
+  {{  
+      stylusHead("just ask", 
+      stylusTopPadding = "py-0 pt-8 xmed:pt-16", 
+      childClass = "text-center text-4xl xmed:text-6.5xl") 
+  }}
 </section>
 
 <!-- FAQs -->
-<section class="px-4 xmed:px-60 pt-10 xmed:pt-20 pb-9 bg-violet">
+<section class="px-4 xmed:px-60 xmed:pt-12 pb-9 bg-violet">
   {% for faq in faqs %}
   <div class="toggleable border-b-2 border-jou-main-2">
     <input
