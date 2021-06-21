@@ -53,8 +53,8 @@ permalinkBypassOutputDir: true
     >
       {{ faq.question }}
     </label>
-    <div class="toggleable__content max-h-0 overflow-hidden">
-      <div
+    <ul class="toggleable__content max-h-0 overflow-hidden">
+      <li
         class="
           py-4
           border-l-2
@@ -67,8 +67,8 @@ permalinkBypassOutputDir: true
         "
       >
         {{ faq.answer }}
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
   {% endfor %}
 </section>
