@@ -1,7 +1,7 @@
 {
     "imagePanels": [
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "jou-main-3",
             "imageUrl": "images/amenities-2",
             "imageAlt": "The pool",
             "figureOrder": "order-1",
@@ -19,7 +19,7 @@
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "jou-main-3",
             "imageUrl": "images/amenities-4",
             "imageAlt": "The bikes",
             "figureOrder": "order-1",
