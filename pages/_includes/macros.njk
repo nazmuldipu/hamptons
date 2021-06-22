@@ -84,7 +84,7 @@
                     </h1>
                 </header>
                 {% if hasSvg == 'true' %}
-                    <div class="flex justify-center my-8">
+                    <div class="flex justify-center my-14">
                         <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
                         </svg>
@@ -94,7 +94,7 @@
         </section>
     </section>
 {% endmacro %}
-{% macro articleSubheader(header = '', p1 = '') %}
+{% macro articleSubheader(header = '', p1 = '', maxWidth = '') %}
     <section class="segment-outer mb-16">
         <article class="segment-inner px-4">
             <header>
@@ -102,7 +102,7 @@
                     {{ header }}
                 </h4>
             </header>
-            <p class="font-paragraph text-center pt-4">
+            <p class="font-paragraph text-center pt-4 {{maxWidth}}">
                 {{ p1 }}
             </p>
         </article>
@@ -116,7 +116,7 @@
                     <h1>something special for you</h1>
                 </header>
                 <p class="mb-6 text-2xl">Click below to view available offers</p>
-                <a href="#" class="font-serif italic font-bold border text-base border-jou-main inline px-6 py-2">View Offers</a>
+                <a href="offers.html" class="font-serif italic font-bold border text-base border-jou-main inline px-6 py-2">View Offers</a>
             </article>
         </section>
     </section>

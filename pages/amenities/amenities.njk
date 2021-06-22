@@ -10,7 +10,7 @@ permalinkBypassOutputDir: true
     <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
         <section class="segment-inner px-4 pt-4 xmed:pt-16">
             <figcaption>
-                <h2 class="text-5xl text-center pb-2 mb-1">
+                <h2 class="text-2xl xmed:text-5xl text-center pb-2 mb-1">
                     A hidden gem for the <br>modern explorer</br>
                 </h2>
             </figcaption>
@@ -28,21 +28,23 @@ permalinkBypassOutputDir: true
             </figure>
             <article class="max-w-2xl m-auto">
                 <header>
-                    <h1 class="font-hijrnotes text-6xl text-center">
+                    <h1 class="font-hijrnotes text-4xl xmed:text-6.5xl mt-4 xmed:mt-10 text-center">
                         enjoy the journey
                     </h1>
                 </header>
-                <div class="xmed:hidden flex justify-center my-16">
-                    <img src="/images/amenities-1.svg">
+                <div class="flex justify-center my-16">
+                    <svg width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.65231 41.3536C3.84757 41.5488 4.16415 41.5488 4.35941 41.3536L7.54139 38.1716C7.73666 37.9763 7.73666 37.6597 7.54139 37.4645C7.34613 37.2692 7.02955 37.2692 6.83429 37.4645L4.00586 40.2929L1.17743 37.4645C0.98217 37.2692 0.665588 37.2692 0.470325 37.4645C0.275063 37.6597 0.275063 37.9763 0.470325 38.1716L3.65231 41.3536ZM3.50586 0L3.50586 41H4.50586L4.50586 0L3.50586 0Z" fill="#354656"/>
+                    </svg>
                 </div>
             </article>
-            <article class="max-w-2xl m-auto">
+            <article class="max-w-xs xmed:max-w-4xl m-auto">
                 <header>
-                    <h4 class="xmed:hidden text-center text-2xl">
+                    <h4 class="text-center text-2xl font-semibold xmed:text-4.5xl">
                         Our special aminities
                     </h4>
                 </header>
-                <p class="text-center pt-4">
+                <p class="text-center text-base xmed:text-2xl pt-4">
                     Sometimes all you need is to escape from the city, enjoy the nature, absorve the sun, and feel the sea breeze.We offer a variety of amenities to enhance your stay.
                 </p>
             </article>
@@ -50,14 +52,14 @@ permalinkBypassOutputDir: true
     </section>
 
     {% for item in imagePanels %}
-        <section class="segment-outer segment-outer__image-panel">
-            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center {{ item.backgroundColor }}">
+        <section class="segment-outer bg-{{ item.backgroundColor }}">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 xmed:px-16 items-center">
                 <figure class="xmed:justify-end {{ item.figureOrder }}">
                     <picture>
                         <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
-                    {{ item.imageUrl }}.webp 600w,
-                    {{ item.imageUrl }}_300.webp 300w
-                ">
+                            {{ item.imageUrl }}.webp 600w,
+                            {{ item.imageUrl }}_300.webp 300w
+                        ">
                         <img class="w-full" src="{{ item.imageUrl }}.jpg" class="inline-block" alt="the lawn">
                     </picture>
                 </figure>
@@ -72,14 +74,14 @@ permalinkBypassOutputDir: true
     {% endfor %}
 </section>
 
-<section class="segement-outer">
+<section class="segement-outer bg-jou-main-3">
     <section class="segment-inner">
-        <article class="text-center mb-8 mt-16">
-            <header class="font-hijrnotes text-6xl mb-6">
+        <article class="text-center my-16">
+            <header class="font-hijrnotes text-4xl xmed:text-6.5xl mb-6">
                 <h1>something special for you</h1>
             </header>
-            <p class="mb-6">Click below to view available offers</p>
-            <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
+            <p class="mb-6 text-base xmed:text-2xl">Click below to view available offers</p>
+            <a href="offers.html" class="font-serif font-bold italic border border-jou-main inline px-6 py-2">View Offers</a>
         </article>
     </section>
 </section>

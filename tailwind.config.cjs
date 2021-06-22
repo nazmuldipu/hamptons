@@ -23,6 +23,7 @@ module.exports = {
         "jou-main-1": "#1B3A5C",
         "jou-main-2": "#DBC8B6",
         "jou-main-3": "#EEE5DC",
+        "jou-main-4": "#D9D9D6",
         "jou-main": "#354656",
         "nav-arrow": "#858585",
         white: "#fff",
@@ -33,7 +34,8 @@ module.exports = {
         "vio-2": "#EEE5DC",
       },
       maxWidth: {
-        "jou-desktop": "1200px",
+        "jou-tablet": "1200px",
+        "jou-desktop": "2600px",
         "hero-width": "832px",
         subheader__caption: "19rem",
       },
@@ -66,6 +68,7 @@ module.exports = {
       gridTemplateColumns: {
         "3-min-min": "repeat(3, min-content)",
         "50-40-40": "1.5fr 1fr 1fr",
+        "2-max-max": "repeat(2, max-content)",
       },
     },
   },
