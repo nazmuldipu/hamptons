@@ -32,7 +32,7 @@ permalinkBypassOutputDir: true
 {% endmacro %}
 
 <!-- Picture macro -->
-{% macro pictureImg(name, parentClass, childClass)%}
+{% macro pictureImg(name, parentClass, childClass, format="png")%}
 <figure class="{{ parentClass }}">
   <picture>
     <source
@@ -41,10 +41,10 @@ permalinkBypassOutputDir: true
       srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
     />
     <img
-      src="images/{{ name }}.png"
+      src="images/{{ name }}.{{format}}"
       class="{{ childClass }}"
       alt="{{ name }}"
-      srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
+      srcset="images/{{name}}.{{format}} 900w, images/{{name}}.{{format}} 640w"
     />
   </picture>
 </figure>
@@ -87,9 +87,13 @@ permalinkBypassOutputDir: true
   </div>
 
   <div class="xmed:max-w-3xl xmed:mx-auto p-3 grid grid-cols-2 xmed:grid-cols-3 place-content-center">
-    {% set items = [2, 3, 4, 5, 6,7 ] %} {% for item in items %}
-
-    {{ pictureImg("homepage-" + item, "p-1 xmed:p-2", "w-full") }} {% endfor %}
+    {% set items = [ 2, 3, 4, 5, 6, 7 ] %}
+    {% for item in items %}
+      <div class="relative">
+        {{ pictureImg("homepage-" + item + "-alt_2xs", "p-1 xmed:p-2 absolute opacity-0 hover:opacity-100 transition-all duration-1000 z-1", "w-full") }}
+        {{ pictureImg("homepage-" + item, "p-1 xmed:p-2", "w-full") }}
+      </div>
+    {% endfor %}
   </div>
 
   {{ stylusHead("welcome to the hamptons") }}
