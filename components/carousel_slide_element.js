@@ -5,7 +5,7 @@ function carousel_slide(className) {
     prevBtn.addEventListener("click", prevEvent);
   
     const itemClassName =
-      className + " transition-all ease-in-out duration-1000 transform";
+      className + " w-full transition-all ease-in-out duration-1000 transform";
     const items = document.getElementsByClassName(className);
     const totalItems = items.length;
     let slide = 0;
