@@ -10,5 +10,6 @@
     .favourite-foods__address{
         @apply text-center;
         @apply text-base xmed:text-2xl;
+        @apply leading-9;
     } 
 }
