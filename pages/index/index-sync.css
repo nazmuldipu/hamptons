@@ -1,3 +1,17 @@
 /****  start imports  ********************************/
 @import "../../styles/global.css";
 /****  end imports  ********************************/
+
+@layer base {
+    .amenities-carousel{
+        @apply absolute;
+        @apply overflow-hidden;
+        @apply h-amenities;
+        @apply xmed:h-xmed-amenities;
+    }
+    .amenities-carousel__child{
+        @apply overflow-hidden;
+        @apply h-amenities;
+        @apply xmed:h-xmed-amenities;
+    }
+}

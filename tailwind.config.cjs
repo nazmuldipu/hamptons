@@ -48,6 +48,8 @@ module.exports = {
         15: "60px",
         19: "76px",
         25: "100px",
+        "amenities": "420px",
+        "xmed-amenities": "520px",
       },
       minHeight: {
         "15.5h": "15.5rem",
