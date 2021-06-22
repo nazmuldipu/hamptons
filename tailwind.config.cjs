@@ -51,6 +51,7 @@ module.exports = {
       },
       minHeight: {
         "15.5h": "15.5rem",
+        "20h": "20rem",
       },
       fontFamily: {
         serif: ["Adobe Garamond Pro", "serif"],

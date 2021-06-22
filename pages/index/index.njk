@@ -65,7 +65,7 @@ permalinkBypassOutputDir: true
   {{
     rectLink(
       "Location",
-      "/location.html",
+      "/hamptons.html",
       "text-center block my-5",
       "px-10 py-2 italic font-semibold border border-black text-base"
     )
@@ -82,35 +82,35 @@ permalinkBypassOutputDir: true
         pictureImg(
           "room0",
           "absolute",
-          "room-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+          "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room1",
           "absolute",
-          "room-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+          "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room2",
           "absolute",
-          "room-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+          "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room3",
           "absolute",
-          "room-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+          "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room4",
           "absolute",
-          "room-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+          "room-carousel"
         )
       }}
     </div>
@@ -183,7 +183,7 @@ permalinkBypassOutputDir: true
   {{
     rectLink(
       "View Amenities",
-      "/location.html",
+      "/amenities.html",
       "hidden xmed:block text-center block my-5",
       "px-4 py-2 italic font-semibold border border-black text-base"
     )
@@ -197,43 +197,43 @@ permalinkBypassOutputDir: true
       {{ leftArrow("nav-arrow", true) }}
     </div>
     <div class="col-span-7 w-full">
-      <div class="max-w-5xl mx-auto h-96">
+      <div class="max-w-5xl mx-auto h-44 xmed:h-96">
     {# {{ pictureImg("homepage-8", "", "w-full") }} #}
 
-        <div class="overflow-hidden relative h-96">
+        <div class="overflow-hidden relative h-44 xmed:h-96">
           {{
             pictureImg(
               "bike",
               "absolute",
-              "amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+              "amenities-carousel"
             )
           }}
           {{
             pictureImg(
               "amenities-1",
               "absolute",
-              "amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+              "amenities-carousel"
             )
           }}
           {{
             pictureImg(
               "amenities-2",
               "absolute",
-              "amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+              "amenities-carousel"
             )
           }}
           {{
             pictureImg(
               "amenities-3",
               "absolute",
-              "amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+              "amenities-carousel"
             )
           }}
           {{
             pictureImg(
               "amenities-4",
               "absolute",
-              "amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+              "amenities-carousel"
             )
           }}
         </div>
@@ -252,7 +252,7 @@ permalinkBypassOutputDir: true
   {{
     rectLink(
       "View Amenities",
-      "/location.html",
+      "/amenities.html",
       "xmed:hidden text-center block my-5",
       "px-4 py-2 italic font-semibold border border-black text-base"
     )
@@ -270,9 +270,9 @@ permalinkBypassOutputDir: true
 
   {{ h2Head("Outstanding", "xmed:text-4.5xl font-semibold ") }}
 
-  <div class="overflow-hidden relative min-h-15.5h max-w-4xl mx-auto">
+  <div class="overflow-hidden relative min-h-20h xmed:min-h-15.5h max-w-4xl mx-auto">
     {% for comment in comments %}
-    <div class="absolute inset-x-1/4">
+    <div class="absolute  xmed:inset-x-1/4">
       <div
         class="
           comments-carousel
@@ -309,7 +309,7 @@ permalinkBypassOutputDir: true
     {% endfor %}
   </div>
 
-  <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-48 pb-8">
+  <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-48 py-8">
     <span
       class="px-2 justify-self-end xmed:justify-self-start cursor-pointer"
       id="comments-carousel-prev"
