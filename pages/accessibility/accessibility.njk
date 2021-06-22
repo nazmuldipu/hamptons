@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagename: accessibility
+meta_title: "ACCESSIBILITY"
+permalink: "build/accessibility.html"
+permalinkBypassOutputDir: true
+---
+{% from "macros.njk" import stylusHead, h2Head, rectLink, pictureImg %}
+
+<!-- top banner -->
+<section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
+  {{
+    h2Head(
+      "ADA accessibility and guests with disabilities at Journey East Hampton.",
+      " text-2xl xmed:text-5xl max-w-xs xmed:max-w-3xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
+    )
+  }}
+
+  {{
+    pictureImg("hamptons-1", " max-w-full xmed:max-w-hero-width", "mx-auto max-w-full xmed:max-w-4xl")
+  }}
+
+  {{ stylusHead("just ask", "text-center text-4xl xmed:hidden") }}
+
+  <div class="grid justify-items-center pt-16 xmed:hidden">
+    <img src="/images/down_arrow.svg" alt="Down Arrow" />
+  </div>
+</section>
+
+<section class="mx-auto pt-8 xmed:pt-12 pb-9 bg-violet px-4 xmed:px-48">
+    <div class="text-base xemd:text-2xl">
+        <p class="mb-6">ADA accessibility and guests with disabilities at Journey East Hampton</p>
+        
+        <p class="mb-8">At Journey East Hampton, it's important to us that our website is accessible and easy to use for all persons with disabilities.</p>
+        
+        <p class="mb-8">Our development team uses software tools to identify identify web accessibility standards as outlined by the World Wide Web Consortium's Web Content Accessibility Guidelines 2.0 Level AA (WCAG 2.0 AA). While the industry is not operating from approved, regulated legislation, Journey East Hampton is committed to our good faith effort to follow the guidelines available.</p>
+
+        <p class="mb-8">If you have questions, concerns or have discovered an accessibility issue on our website, please contact us by emailing to <a href = "mailto:stay@journeyeasthampton.com">stay@journeyeasthampton.com</a>. Be sure to include specifics and any page where an issue has occurred. We will make every reasonable effort to make the page accessible for you.</p>
+        
+        <p class="mb-8">Facilities for Guests With Disabilities</p>
+
+        <p class="mb-8">There are rooms at the hotel which are specially adapted for physically challenged guests. These rooms are in full compliance with the Americans with Disabilities Act.</p>
+        
+        <p class="mb-8">Please direct your questions about Journey East Hampton’s accessible facilities and services to the Front Desk or (631) 324-4550 to ensure your requests are handled properly.</p>
+    </div>
+</section>
