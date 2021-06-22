@@ -16,46 +16,51 @@
   "cozy_rooms": [
     {
       "title": "atlantic king suite",
-      "text": "Our Atlantic King Suite offers one king size bed and one queen sleeper sofa with a spacious studio layout filled with stylishly designed furnishings. ",
-      "image": "room1",
+      "tag":"atlantic",
+      "text": "Our Atlantic King Suite offers one king size bed and one queen sleeper sofa with a spacious studio layout filled with stylishly designed furnishings",
+      "images" : [ "AtlanticKingSuite1","AtlanticKingSuite2","AtlanticKingSuite3","AtlanticKingSuite4"],
       "details": [
-        "1 king bed",
-        "Living room with 1 sleeper sofa",
-        "Maximum occupancy of 4"
+        "Spacious studio layout filled with stylishly designed furnishings"
       ]
     },
     {
       "title": "hampton king",
-      "text": "Our Hampton King room offers one king size bed with contemporary furnishings. Perfect for solo/business travelers or couples to explore the Eastern End of Long Island.",
-      "image": "room2",
+      "tag": "hampton",
+      "text": "Our Hampton King room offers one king size bed with contemporary furnishings to enlighten your experience.",
+      "images" : [ "HamptonKing1","HamptonKing2", "HamptonKing3", "HamptonKing4"],
       "details": [
-        "1 king bed",
-        "Living room with sleeper sofa",
-        "Maximum occupancy of 4"
+        "Room with contemporary furnishings to enlighten your experience"
       ]
     },
     {
       "title": "cottage king",
+      "tag": "cottage",
       "text": "Our quaint cottages offer one king size bed and one queen sleeper sofa specifically built for an intimate group of friends or family.",
-      "image": "room3",
+      "images": ["CottageKing1","CottageKing2","CottageKing3","CottageKing4","CottageKing5"],
       "details": [
-        "1 king bed",
-        "Living room with sleeper sofa",
-        "Private patio",
-        "Maximum occupancy of 4"
+        "Cottage built for intimate group of friends and family"
       ]
     },
     {
       "title": "atlantic double queen",
-      "text": "Our Atlantic Double Queen room offers two queen size beds with contemporary furnishing to enlighten your experience.",
-      "image": "room4",
-      "details": ["2 queen beds", "Maximum occupancy of 4"]
+      "tag": "atlantic-double",
+      "text": "Our Atlantic Double Queen room offers two queen size beds with contemporary furnishings to englighten your experience",
+      "images":[ "AtlanticDoubleQueen1","AtlanticDoubleQueen2","AtlanticDoubleQueen3","AtlanticDoubleQueen4","AtlanticDoubleQueen5"],
+      "details": ["Room with contemporary furnishings to enlighten your experience"]
+    },
+    {
+      "title": "amagansett suite",
+      "tag": "amagansett",
+      "text": "Our Amagansett Suite is one of the few true two bedroom & two bathroom suites in the area.  Immerse yourself in this beautifully designed space with items and amenities curated to help you enjoy the Hamptons like it was meant to be experienced.  With one king bedroom and one queen bedroom, adjoined by a spacious open concept living area, dining and kitchen, you will feel like a local.",
+      "images":[ "AmagansettSuite1","AmagansettSuite2","AmagansettSuite3","AmagansettSuite4","AmagansettSuite5"],
+      "details": ["Beautifully designed true two bedroom & two bathroom suite "]
     },
     {
       "title": "accessible hampton king",
-      "text": "Our mobility and hearing accessible Hampton King room offers one king size bed with a spacious studio layout filled with elegantly designed furnishings. This room includes a roll-in shower, grab bars, a handheld shower head, and smoke and carbon monoxide detectors with strobes. ADA kits available at check-in. If you would like further details regarding the room size and/or features of the accessible rooms, we encourage you to call the hotel and speak with a Guest Service Representative. Any corresponding photos may not reflect the specific accessible room type or room feature.",
-      "image": "room5",
-      "details": ["1 king bed", "Maximum occupancy of 2"]
+      "tag": "accessible",
+      "text": "Our mobility and hearing accessible Hampton King room offers one king size bed with spacious studio layout filled with elegantly designed furnishings. This room includes a roll-in shower, grab bars, a handheld shower head, and smoke and carbon monoxide detectors with strobes. ADA kits availbel at check-in. If you would like further details regarding the room size and/or fratures of the accessible rooms, we encourage you to call the hote land speak with a Guest Service representative. Any corresponding photos may not reflect the specific acessible room type or room feature.",
+      "images": ["AcessibleHamptonKing1","AcessibleHamptonKing2","AcessibleHamptonKing1","AcessibleHamptonKing2"],
+      "details": ["Mobility and hearing accessible room filled with ADA accomodating features"]
     }
   ]
 }

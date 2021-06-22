@@ -113,32 +113,31 @@ permalinkBypassOutputDir: true
 
   {% for room in cozy_rooms %}
   <div class="grid grid-cols-1 xmed:grid-cols-5 gap-4 pb-14">
-    <div class="xmed:col-span-3">
-      {{ pictureImg(room.image, "max-w-hero-width", "w-full") }}
-      <div
-        class="
-          px-4
-          -mt-32
-          sm:-mt-56
-          xmed:-mt-40
-          mar-tablet:-mt-52
-          xl:-mt-54
-          xmed:px-5
-          grid grid-cols-2
-        "
-      >
-        <div class="">
-          <a class="inline-block bg-gray-100 bg-opacity-75" href="#">{{
-            leftArrow("jou-main-1")
-          }}</a>
+    <div class="relative xmed:col-span-3">
+      <div class="overflow-hidden relative max-w-hero-width h-96">
+        {% for image in room.images %}
+          {{ pictureImg(image, "absolute", room.tag + "-carousel") }}
+        {% endfor %}
+
+        <div class="absolute left-2 top-1/2">
+          <div class="inline-block bg-gray-100 bg-opacity-75 cursor-pointer" id="{{room.tag}}-carousel-prev" >
+            {{
+              leftArrow("jou-main-1")
+            }}
+          </div>
+          
         </div>
-        <div class="place-self-end">
-          <a class="inline-block bg-gray-100 bg-opacity-75" href="#">{{
-            rightArrow("jou-main-1")
-          }}</a>
+        <div class="absolute right-2 top-1/2">
+          <div class="inline-block bg-gray-100 bg-opacity-75 cursor-pointer" id="{{room.tag}}-carousel-next" href="#">
+            {{
+              rightArrow("jou-main-1")
+            }}
+          </div>
         </div>
       </div>
-      <div class="mb-32 sm:mb-56 xmed:mb-28 mar-tablet:mb-52 xl:mb-56"></div>
+      
+        
+      <!-- <div class="mb-32 sm:mb-56 xmed:mb-28 mar-tablet:mb-52 xl:mb-56"></div> -->
     </div>
 
     <div class="xmed:col-span-2">
