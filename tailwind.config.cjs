@@ -23,8 +23,9 @@ module.exports = {
         "jou-main-1": "#1B3A5C",
         "jou-main-2": "#DBC8B6",
         "jou-main-3": "#EEE5DC",
-        "jou-main": "#354656",
         "jou-main-4": "#D9D9D6",
+        "jou-main": "#354656",
+        "nav-arrow": "#858585",
         white: "#fff",
         grey: "#D9D9D6",
         "grey-1": "#E5E5E5",
@@ -49,6 +50,12 @@ module.exports = {
         15: "60px",
         19: "76px",
         25: "100px",
+        "amenities": "420px",
+        "xmed-amenities": "520px",
+      },
+      minHeight: {
+        "15.5h": "15.5rem",
+        "20h": "20rem",
       },
       fontFamily: {
         serif: ["Adobe Garamond Pro", "serif"],

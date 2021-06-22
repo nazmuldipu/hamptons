@@ -160,10 +160,10 @@ body {
   @apply font-hijr;
 }
 
-.font-paragraph{
+.font-paragraph {
     @apply text-base xmed:text-2xl;
 }
-.button__primary{
+.button__primary {
     @apply font-serif;
     @apply italic;
     @apply text-base;
@@ -172,5 +172,12 @@ body {
     @apply px-6;
     @apply py-2;
 }
-
+.picture-image__caption {
+    @apply absolute;
+    @apply bottom-0;
+    @apply left-0;
+    @apply w-full;
+    @apply z-10;
+    @apply bg-violet;
+}
 /****  end page-content  ********************************/
