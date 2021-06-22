@@ -188,12 +188,64 @@ permalinkBypassOutputDir: true
       "px-4 py-2 italic font-semibold border border-black text-base"
     )
   }}
+
+ 
+
   <div class="grid grid-cols-9 xmed:px-64 xmed:justify-items-center">
-    <a class="self-center xmed:mx-14" href="#">{{ leftArrow("#858585") }}</a>
-    <div class="col-span-7">
-      {{ pictureImg("homepage-9", "w-full xmed:max-w-sm", "w-full") }}
+    {# <a class="self-center xmed:mx-14" href="#">{{ leftArrow("#858585") }}</a> #}
+    <div class="self-center xmed:mx-14 cursor-pointer" id="amenities-carouel-prev">
+      {{ leftArrow("nav-arrow", true) }}
     </div>
-    <a class="self-center xmed:mx-14" href="#">{{ rightArrow("#858585") }}</a>
+    <div class="col-span-7 w-full">
+      <div class="max-w-5xl mx-auto h-96">
+    {# {{ pictureImg("homepage-8", "", "w-full") }} #}
+
+        <div class="overflow-hidden relative h-96">
+          {{
+            pictureImg(
+              "bike",
+              "absolute",
+              "amenities-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+            )
+          }}
+          {{
+            pictureImg(
+              "amenities-1",
+              "absolute",
+              "amenities-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+            )
+          }}
+          {{
+            pictureImg(
+              "amenities-2",
+              "absolute",
+              "amenities-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+            )
+          }}
+          {{
+            pictureImg(
+              "amenities-3",
+              "absolute",
+              "amenities-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+            )
+          }}
+          {{
+            pictureImg(
+              "amenities-4",
+              "absolute",
+              "amenities-carouel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0"
+            )
+          }}
+        </div>
+  </div>
+
+      {# {{ pictureImg("bike", "w-full xmed:max-w-sm", "w-full") }} #}
+    </div>
+
+    <div class="self-center xmed:mx-14 cursor-pointer" id="amenities-carouel-next">
+      {{ rightArrow("nav-arrow", true) }}
+    </div>
+    {# <a class="self-center xmed:mx-14" href="#">{{ rightArrow("#858585") }}</a> #}
   </div>
   {{ stylusHead("the bikes") }}
 

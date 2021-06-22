@@ -1,6 +1,7 @@
 function carouel_slide(className) {
   const nextBtn = document.getElementById(className + "-next");
   const prevBtn = document.getElementById(className + "-prev");
+  console.log(className+'-next')
   nextBtn.addEventListener("click", nextEvent);
   prevBtn.addEventListener("click", prevEvent);
 
@@ -86,3 +87,4 @@ function carouel_slide(className) {
 
 carouel_slide("room-carouel");
 carouel_slide("comments-carouel");
+carouel_slide("amenities-carouel");
