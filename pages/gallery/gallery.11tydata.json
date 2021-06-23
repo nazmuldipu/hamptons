@@ -1,32 +1,62 @@
 {
-    "imagePanels": [
+    "hotels":[
         {
-            "backgroundColor": "bg-vio-1",
+            "category": "hotel",
             "imageUrl": "images/gallery-2",
             "imageAlt": "The pool"
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "category": "hotel",
+            "imageUrl": "images/gallery-6",
+            "imageAlt": "The lawn"
+        }
+    ],
+    "hamptons": [
+        {
+            "category": "hamptons",
             "imageUrl": "images/gallery-4",
             "imageAlt": "The pool"
         },
         {
-            "backgroundColor": "bg-grey",
-            "imageUrl": "images/gallery-6",
-            "imageAlt": "The lawn"
-        },
+            "category": "hamptons",
+            "imageUrl": "images/gallery-5",
+            "imageAlt": "The lobby"
+        }
+    ],
+    "rooms":[
         {
-            "backgroundColor": "bg-vio-1",
+            "category": "rooms",
             "imageUrl": "images/gallery-3",
             "imageAlt": "The bikes"
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "category": "rooms",
+            "imageUrl": "images/gallery-7",
+            "imageAlt": "The lobby"
+        }
+    ],
+    "imagePanels": [
+        {
+            "imageUrl": "images/gallery-2",
+            "imageAlt": "The pool"
+        },
+        {
+            "imageUrl": "images/gallery-4",
+            "imageAlt": "The pool"
+        },
+        {
+            "imageUrl": "images/gallery-6",
+            "imageAlt": "The lawn"
+        },
+        {
+            "imageUrl": "images/gallery-3",
+            "imageAlt": "The bikes"
+        },
+        {
             "imageUrl": "images/gallery-5",
             "imageAlt": "The lobby"
         },
         {
-            "backgroundColor": "bg-vio-1",
             "imageUrl": "images/gallery-7",
             "imageAlt": "The lobby"
         }

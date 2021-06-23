@@ -4,10 +4,31 @@
 @layer base{
     .gallery-image__column{
         column-count: 2;
+        @apply hidden;
     }
     @media only screen and (max-width: 900px) {
         .gallery-image__column {
             column-count: 1;
         }
+    }
+    .tab__radio {
+        @apply hidden;
+    }
+    .tab--1:checked ~ .tab__containers .all{
+        @apply block;
+    }
+    .tab--2:checked ~ .tab__containers .rooms,
+    .tab--3:checked ~ .tab__containers .hotel,
+    .tab--4:checked ~ .tab__containers .hamptons {
+        @apply grid;
+        @apply grid-cols-1 xmed:grid-cols-2;
+        @apply gap-x-4;
+    }
+    .tab__label{
+        @apply cursor-pointer;
+    }
+    .tab__radio:checked + .tab__label {
+        @apply border-b-1;
+        @apply border-jou-main-2;
     }
 }
