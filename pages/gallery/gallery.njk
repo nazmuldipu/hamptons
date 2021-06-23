@@ -24,11 +24,11 @@ subfooter %}
     ) 
 }}
 
-<section class="segment-outer">
+<section class="segment-outer px-5 xmed:px-16">
     <section class="segment-inner">
         {% macro gallery(array)%}
             {% for item in array %}
-                <figure class="inline-block mb-2 px-8 xmed:px-0">
+                <figure class="inline-block mb-2">
                     <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
                 </figure>
             {% endfor %}
@@ -38,15 +38,15 @@ subfooter %}
             <label for="tab--1" class="tab__label">All</label>
 
             <input type="radio" id="tab--2" class="tab--2 tab__radio" name="tab__radio">
-            <label for="tab--2" class="tab__label">Hotel</label>
+            <label for="tab--2" class="tab__label ml-2">Hotel</label>
 
             <input type="radio" id="tab--3" class="tab--3 tab__radio" name="tab__radio">
-            <label for="tab--3" class="tab__label">Rooms</label>
+            <label for="tab--3" class="tab__label ml-2">Rooms</label>
 
             <input type="radio" id="tab--4" class="tab--4 tab__radio" name="tab__radio">
-            <label for="tab--4" class="tab__label">Hamptons</label>
+            <label for="tab--4" class="tab__label ml-2">Hamptons</label>
             
-            <div class="tab__containers">
+            <div class="tab__containers mt-8">
                 <section class="gallery-image__column all">
                     {{ gallery(imagePanels)}}
                 </section>

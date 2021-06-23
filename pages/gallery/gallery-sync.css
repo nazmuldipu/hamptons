@@ -20,7 +20,9 @@
     .tab--2:checked ~ .tab__containers .rooms,
     .tab--3:checked ~ .tab__containers .hotel,
     .tab--4:checked ~ .tab__containers .hamptons {
-        @apply block;
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-x-4;
     }
     .tab__radio:checked + .tab__label {
         @apply border-b-1;
