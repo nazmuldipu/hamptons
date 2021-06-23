@@ -51,9 +51,13 @@ permalinkBypassOutputDir: true
       place-content-center
     "
   >
-    {% set items = [2, 3, 4, 5, 6,7 ] %} {% for item in items %}
-
-    {{ pictureImg("homepage-" + item, "p-1 xmed:p-2", "w-full") }} {% endfor %}
+    {% set items = [ 2, 3, 4, 5, 6, 7 ] %}
+    {% for item in items %}
+      <div class="relative">
+        {{ pictureImg("homepage-" + item + "-alt_2xs", "p-1 xmed:p-2 absolute opacity-0 hover:opacity-100 transition-all duration-1000 z-1", "w-full") }}
+        {{ pictureImg("homepage-" + item + "_2xs", "p-1 xmed:p-2", "w-full") }}
+      </div>
+    {% endfor %}
   </div>
 
   {{ stylusHead("welcome to the hamptons") }}
