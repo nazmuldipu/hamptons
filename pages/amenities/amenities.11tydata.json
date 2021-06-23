@@ -12,7 +12,7 @@
         },
         {
             "backgroundColor": "",
-            "innerClass": "mt-14 bg-grey xmed:bg-violet",
+            "innerClass": "my-14 xmed:my-0 bg-grey xmed:bg-violet",
             "imageUrl": "images/amenities-3",
             "imageAlt": "The lawn",
             "figureOrder": "order-2",
@@ -31,7 +31,7 @@
         },
         {
             "backgroundColor": "",
-            "innerClass": "mt-14 bg-grey xmed:bg-violet",
+            "innerClass": "mt-14 xmed:my-0 bg-grey xmed:bg-violet",
             "imageUrl": "images/amenities-5",
             "imageAlt": "The lobby",
             "figureOrder": "order-2",

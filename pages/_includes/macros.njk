@@ -126,7 +126,7 @@
 <!-- Content Stylus Head -->
 {% macro stylusHead(text, childClass="text-start", stylusTopPadding = '') %}
 <div class="py-3 {{ stylusTopPadding }}">
-  <div class="font-hijrnotes font-normal not-italic leading-8 py-1 px-6 text-center text-jou-main-1 tracking-tighter text-4xl {{ childClass }}">{{ text }}</div>
+  <div class="font-hijrnotes font-normal not-italic leading-8 py-1 px-6 text-center text-jou-main-1 tracking-tighter text-4xl {{ childClass }}">{{ text | safe }}</div>
 </div>
 {% endmacro %}
 
@@ -134,7 +134,7 @@
 {% macro h2Head(text, childClass) %}
 <div class="py-3">
   <h2 class="text-2xl text-center {{ childClass }} ">
-    {{ text }}
+    {{ text | safe }}
   </h2>
 </div>
 {% endmacro %}
