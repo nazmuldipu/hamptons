@@ -6,6 +6,15 @@ meta_description: Some description here
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KKQNLKM');
+    </script>
+<!-- End Google Tag Manager -->
 <!-- start Google Analytics -->
         {% if ga_id %}
             <script async src="https://www.googletagmanager.com/gtag/js?id={{ga_id}}"></script>
@@ -59,6 +68,11 @@ meta_description: Some description here
 <!-- end scripts -->
     </head>
     <body class="preload {% if templatename %} template-{{templatename}} {% endif %} page-{{pagename}} bg-violet">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQNLKM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
         {% include "_page-header.njk" %}
         {{content | safe}}
         {% include "_page-footer.njk" %}
