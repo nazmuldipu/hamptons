@@ -13,8 +13,8 @@ permalinkBypassOutputDir: true
         <section class="segment-inner px-4 pt-4 xmed:pt-16">
             {{
                 h2Head(
-                "A hidden gem for the modern explorer",
-                "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pb-8 mx-auto font-normal"
+                "A hidden gem for the <br>modern explorer",
+                "text-2xl xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pb-8 mx-auto font-normal"
                 )
             }}
             <figure class="max-w-hero-width mx-auto">
@@ -36,9 +36,9 @@ permalinkBypassOutputDir: true
                 <img src="/images/down_arrow.svg" alt="Down Arrow" />
             </div>
 
-            {{ h2Head(" Our special amenities", "xmed:text-4.5xl xmed:mt-24 font-semibold") }}
-            <article class="max-w-2xl m-auto">
-                 <p class="text-center pt-4">
+            {{ h2Head(" Our special amenities", "text-2xl xmed:text-4.5xl xmed:mt-24 font-semibold") }}
+            <article class="max-w-xs xmed:max-w-4xl m-auto">
+                 <p class="text-center text-base xmed:text-2xl pt-4">
                     Sometimes all you need is to escape from the city, enjoy the nature, absorve the sun, and feel the sea breeze.We offer a variety of amenities to enhance your stay.
                 </p>
             </article>
@@ -46,8 +46,8 @@ permalinkBypassOutputDir: true
     </section>
 
     {% for item in imagePanels %}
-        <section class="segment-outer segment-outer__image-panel {{ item.backgroundColor }}">
-            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center {{ item.innerClass }}">
+        <section class="segment-outer {{ item.backgroundColor }}">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:px-16 xmed:py-16 items-center {{ item.innerClass }}">
 
                 <figure class="xmed:justify-end {{ item.figureOrder }}">
                     <picture>
@@ -70,15 +70,15 @@ permalinkBypassOutputDir: true
 </section>
 
 <!-- Special offers -->
-<section class="mx-auto py-20 bg-vio-2">
+<section class="mx-auto py-10 xmed:py-20 bg-vio-2">
   {{
     stylusHead(
-      "something special for you",
+      "something special <span class='hidden xmed:inline-block'>for you<span>",
       "text-center text-4xl xmed:text-6.5xl"
     )
   }}
 
-  <p class="text-base xmed:text-2xl py-8 text-center">
+  <p class="text-base xmed:text-2xl py-4 xmed:py-8 text-center">
     Click below to view available offers
   </p>
 
