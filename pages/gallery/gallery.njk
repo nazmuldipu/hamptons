@@ -26,36 +26,38 @@ subfooter %}
 
 <section class="segment-outer">
     <section class="segment-inner">
+        {% macro gallery(array)%}
+            {% for item in array %}
+                <figure class="inline-block mb-2 px-8 xmed:px-0">
+                    <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
+                </figure>
+            {% endfor %}
+        {% endmacro%}
         <section class="text-center">
-            {% set border = 'border-b-1 border-jou-main-2' %}
             <input type="radio" id="tab--1" class="tab--1 tab__radio" name="tab__radio" checked>
-            <label for="tab--1" class="{{ border }} tab__label">All</label>
+            <label for="tab--1" class="tab__label">All</label>
 
             <input type="radio" id="tab--2" class="tab--2 tab__radio" name="tab__radio">
-            <label for="tab--2" class="{{ border }} tab__label">Hotel</label>
+            <label for="tab--2" class="tab__label">Hotel</label>
 
             <input type="radio" id="tab--3" class="tab--3 tab__radio" name="tab__radio">
-            <label for="tab--3" class="{{ border }} tab__label">Rooms</label>
+            <label for="tab--3" class="tab__label">Rooms</label>
 
             <input type="radio" id="tab--4" class="tab--4 tab__radio" name="tab__radio">
             <label for="tab--4" class="tab__label">Hamptons</label>
             
             <div class="tab__containers">
-                <section class="hidden all">
-                    {% for item in imagePanels %}
-                        <figure class="inline-block mb-2 px-8 xmed:px-0">
-                            <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
-                        </figure>
-                    {% endfor %}
+                <section class="gallery-image__column all">
+                    {{ gallery(imagePanels)}}
                 </section>
-                <section class="hidden rooms">
-                    2222222
+                <section class="gallery-image__column rooms">
+                    {{ gallery(rooms)}}
                 </section>
-                <section class="hidden hamptons">
-                    333333333
+                <section class="gallery-image__column hamptons">
+                    {{ gallery(hamptons)}}
                 </section>
-                <section class="hidden hotel">
-                    44444444444
+                <section class="gallery-image__column hotel">
+                    {{ gallery(hotels)}}
                 </section>
             </div>
         </section>

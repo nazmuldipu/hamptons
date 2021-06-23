@@ -4,6 +4,7 @@
 @layer base{
     .gallery-image__column{
         column-count: 2;
+        @apply hidden;
     }
     @media only screen and (max-width: 900px) {
         .gallery-image__column {
@@ -20,5 +21,9 @@
     .tab--3:checked ~ .tab__containers .hotel,
     .tab--4:checked ~ .tab__containers .hamptons {
         @apply block;
+    }
+    .tab__radio:checked + .tab__label {
+        @apply border-b-1;
+        @apply border-jou-main-2;
     }
 }
