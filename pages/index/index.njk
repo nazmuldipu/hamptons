@@ -19,11 +19,9 @@ permalinkBypassOutputDir: true
   }}
 
   <!-- banner image -->
-  {{
-    pictureImg("homepage-1", "max-w-hero-width mx-auto", "max-w-3xl mx-auto")
-  }}
+  {{ pictureImg("homepage-1", "mx-auto max-w-full xmed:max-w-hero-width", "w-full") }}
 
-  {{ stylusHead("where travel meets charm") }}
+  {{ stylusHead("where travel meets charm", "text-center  xmed:text-6.5xl") }}
 
   <div class="grid justify-items-center pt-16">
     <img src="/images/down_arrow.svg" alt="Down Arrow" />
@@ -81,35 +79,35 @@ permalinkBypassOutputDir: true
       {{
         pictureImg(
           "room1",
-          "absolute",
+          "absolute inset-0",
           "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room2",
-          "absolute",
+          "absolute inset-0",
           "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room3",
-          "absolute",
+          "absolute inset-0",
           "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room4",
-          "absolute",
+          "absolute inset-0",
           "room-carousel"
         )
       }}
       {{
         pictureImg(
           "room5",
-          "absolute",
+          "absolute inset-0",
           "room-carousel"
         )
       }}
@@ -192,48 +190,27 @@ permalinkBypassOutputDir: true
     <div class="self-center xmed:mx-14 cursor-pointer z-20" id="amenities-carousel-prev">
       {{ leftArrow("nav-arrow", true) }}
     </div>
-    <div class="col-span-7 w-full h-amenities xmed:h-xmed-amenities">
-      <div class="relative max-w-5xl mx-auto">
-        {{
-          pictureImg(
-            "bike",
-            "amenities-carousel",
-            "amenities-carousel__child",
-            "the bikes"
-          )
-        }}
-        {{
-          pictureImg(
-            "amenities-1",
-            "amenities-carousel",
-            "amenities-carousel__child",
-            "the bikes"
-          )
-        }}
-        {{
-          pictureImg(
-            "amenities-2",
-            "amenities-carousel",
-            "amenities-carousel__child",
-            "the pool"
-          )
-        }}
-        {{
-          pictureImg(
-            "amenities-3",
-            "amenities-carousel",
-            "amenities-carousel__child",
-            "the lawn"
-          )
-        }}
-        {{
-          pictureImg(
-            "amenities-4",
-            "amenities-carousel",
-            "amenities-carousel__child",
-            "the bikes"
-          )
-        }}
+    <div class="col-span-7 w-full">
+      <div class="overflow-hidden relative max-w-5xl mx-auto h-amenities xmed:h-xmed-amenities">
+      
+        <div class="absolute inset-0">
+          <div class="amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0">
+            {{ pictureImg( "bike", "h-full", "w-full h-4/5 xmed:h-5/6 object-contain", "the bikes") }}
+          </div>
+          <div class="amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0">
+            {{ pictureImg( "amenities-1", "h-full", "w-full h-4/5 xmed:h-5/6 object-contain", "the bikes" ) }}
+          </div>
+          <div class="amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0">
+            {{ pictureImg( "amenities-2", "h-full", "w-full h-4/5 xmed:h-5/6 object-contain", "the pool") }}
+          </div>
+          <div class="amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0">
+            {{ pictureImg( "amenities-3", "h-full", "w-full h-4/5 xmed:h-5/6 object-contain", "the lawn" ) }}
+          </div>
+          <div class="amenities-carousel transition-all ease-in-out duration-1000 transform translate-x-full opacity-0">
+            {{ pictureImg( "amenities-4", "h-full", "w-full h-4/5 xmed:h-5/6 object-contain", "the bikes" ) }}
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="self-center xmed:mx-14 cursor-pointer z-20" id="amenities-carousel-next">
@@ -261,11 +238,11 @@ permalinkBypassOutputDir: true
 <section class="px-4 py-10 xmed:pt-24 pb-9 bg-violet">
   {{ stylusHead("a hidden gem") }}
 
-  {{ h2Head("Outstanding", "xmed:text-4.5xl font-semibold ") }}
+  
 
   <div class="overflow-hidden relative min-h-20h xmed:min-h-15.5h max-w-4xl mx-auto">
     {% for comment in comments %}
-    <div class="absolute  xmed:inset-x-1/4">
+    <div class="absolute xmed:inset-x-12">
       <div
         class="
           comments-carousel
@@ -277,6 +254,8 @@ permalinkBypassOutputDir: true
           opacity-0
         "
       >
+        {{ h2Head(comment.title, "xmed:text-4.5xl font-semibold ") }}
+        
         <div class="grid grid-cols-1 justify-items-center">
           <div class="text-center text-base w-full xmed:max-w-3xl">
             {{comment.comments}}
@@ -295,14 +274,14 @@ permalinkBypassOutputDir: true
             </div>
           </div>
           <div>{{comment.name}} - {{comment.address}}</div>
-          <div class="italic underline py-4">{{comment.title}}</div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
+  <div class="italic underline py-4 text-center">#1 hotel in East Hampton</div>
 
-  <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-48 py-8">
+  <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-60 py-8">
     <span
       class="px-2 justify-self-end xmed:justify-self-start cursor-pointer"
       id="comments-carousel-prev"
@@ -316,5 +295,5 @@ permalinkBypassOutputDir: true
       {{ rightArrow("nav-arrow", true) }}
     </span>
   </div>
-  <div class="mt-40"></div>
+  <div class="mt-4 xmed:mt-60"></div>
 </section>
