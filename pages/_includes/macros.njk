@@ -28,26 +28,27 @@
 
 <!-- Picture macro -->
 {% macro pictureImg(name, parentClass, childClass, caption = '')%}
-    <div class="picture-image {{parentClass}}">
-        <div class="{{childClass}}">
-            <picture>
-                <source
-                    src="images/{{name}}.webp"
-                    type="image/webp"
-                    srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
-                />
-                <img
-                    src="images/{{name}}.png"
-                    alt="{{name}}"
-                    srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
-                />
-            </picture>
-            {% if (caption !== '') %}
-                <div class="picture-image__caption">
-                    {{ stylusHead( caption ) }}
-                </div>
-            {% endif %}
-        </div>
+    <div class="{{parentClass}}">
+        <picture>
+            <source
+                src="images/{{name}}.webp"
+                type="image/webp"
+                srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
+            />
+            <img
+                src="images/{{name}}.png"
+                class="{{childClass}}"
+                alt="{{name}}"
+                srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
+            />
+        </picture>
+
+        {% if (caption !== '') %}
+        <figcaption>{{ stylusHead( caption, "-mt-3" ) }}</figcaption>
+            {# <div class="picture-image__caption">
+                {{ stylusHead( caption ) }}
+            </div> #}
+        {% endif %}        
     </div>
 {% endmacro %}
 
@@ -123,8 +124,8 @@
 {% endmacro %}
 
 <!-- Content Stylus Head -->
-{% macro stylusHead(text, childClass="text-start") %}
-<div class="py-3">
+{% macro stylusHead(text, childClass="text-start", stylusTopPadding = '') %}
+<div class="py-3 {{ stylusTopPadding }}">
   <div class="font-hijrnotes font-normal not-italic leading-8 py-1 px-6 text-center text-jou-main-1 tracking-tighter text-4xl {{ childClass }}">{{ text | safe }}</div>
 </div>
 {% endmacro %}

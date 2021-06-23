@@ -18,22 +18,22 @@ permalinkBypassOutputDir: true
   }}
 
   {{
-    pictureImg("Journeyhallwayoutside", "max-w-hero-width", "mx-auto max-w-3xl")
+    pictureImg("Journeyhallwayoutside", "max-w-hero-width m-auto", "mx-auto max-w-3xl")
   }}
 
-  {{ stylusHead("just ask", "text-center text-4xl xmed:text-6.5xl") }}
-
-  <div class="grid justify-items-center pt-16">
-    <img src="/images/down_arrow.svg" alt="Down Arrow" />
-  </div>
+  {{  
+      stylusHead("just ask", 
+      stylusTopPadding = "py-0 pt-8 xmed:pt-16", 
+      childClass = "text-center text-4xl xmed:text-6.5xl") 
+  }}
 </section>
 
 <!-- FAQs -->
-<section class="px-4 xmed:px-60 pt-10 xmed:pt-20 pb-9 bg-violet">
+<section class="px-4 xmed:px-60 xmed:pt-12 pb-9 bg-violet">
   {% for faq in faqs %}
   <div class="toggleable border-b-2 border-jou-main-2">
     <input
-      class="toggleable__control absolute hidden--visually border-0 h-px -m-px overflow-hidden p-0 w-px"
+      class="toggleable__control absolute hidden border-0 h-px -m-px overflow-hidden p-0 w-px"
       id="{{ faq.question }}"
       type="checkbox"
     />
@@ -46,17 +46,17 @@ permalinkBypassOutputDir: true
         justify-between
         xmed:text-2xl
         items-center
-        py-2
+        py-4
         cursor-pointer
       "
       for="{{ faq.question }}"
     >
       {{ faq.question }}
     </label>
-    <div class="toggleable__content max-h-0 overflow-hidden">
-      <div
+    <ul class="toggleable__content max-h-0 overflow-hidden">
+      <li
         class="
-          pb-4
+          py-4
           border-l-2
           xmed:border-l-4
           border-jou-main
@@ -67,8 +67,8 @@ permalinkBypassOutputDir: true
         "
       >
         {{ faq.answer }}
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
   {% endfor %}
 </section>
