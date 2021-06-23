@@ -10,4 +10,13 @@
             column-count: 1;
         }
     }
+    .tab__radio {
+        @apply hidden;
+    }
+    .tab--1:checked ~ .tab__containers .all,
+    .tab--2:checked ~ .tab__containers .rooms,
+    .tab--3:checked ~ .tab__containers .hotel,
+    .tab--4:checked ~ .tab__containers .hamptons {
+        @apply block;
+    }
 }

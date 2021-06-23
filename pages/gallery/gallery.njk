@@ -5,12 +5,11 @@ meta_title: "JOURNEY"
 permalink: "build/gallery.html"
 permalinkBypassOutputDir: true
 ---
-{% from "macros.njk" import 
-    subheader,
-    hijrnotesSubheader,
-    articleSubheader,
-    subfooter 
-%}
+{% from "macros.njk" import
+subheader,
+hijrnotesSubheader,
+articleSubheader,
+subfooter %}
 {{ subheader(
     'Gallery',
     'gallery-1',
@@ -27,21 +26,39 @@ permalinkBypassOutputDir: true
 
 <section class="segment-outer">
     <section class="segment-inner">
-        <section class="flex justify-center">
-            <div class="border-b-1 border-jou-main-2">All</div>
-            <div class="ml-8">Hotel</div>
-            <div class="ml-8">Rooms</div>
-            <div class="ml-8">Hamptons</div>
+        <section class="max-w-xs mx-auto">
+            {% set border = 'border-b-1 border-jou-main-2' %}
+            <input type="radio" id="tab--1" class="tab--1 tab__radio" name="tab__radio" checked>
+            <label for="tab--1" class="{{ border }} tab__label">All</label>
+
+            <input type="radio" id="tab--2" class="tab--2 tab__radio" name="tab__radio">
+            <label for="tab--2" class="{{ border }} tab__label">Hotel</label>
+
+            <input type="radio" id="tab--3" class="tab--3 tab__radio" name="tab__radio">
+            <label for="tab--3" class="{{ border }} tab__label">Rooms</label>
+
+            <input type="radio" id="tab--4" class="tab--4 tab__radio" name="tab__radio">
+            <label for="tab--4" class="tab__label">Hamptons</label>
+            
+            <div class="hidden tab__containers">
+                <section class="all">
+                    {% for item in imagePanels %}
+                        <figure class="inline-block mb-2 px-8 xmed:px-0">
+                            <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
+                        </figure>
+                    {% endfor %}
+                </section>
+                <section class="rooms">
+                    2222222
+                </section>
+                <section class="hamptons">
+                    333333333
+                </section>
+                <section class="hotel">
+                    44444444444
+                </section>
+            </div>
         </section>
-    </section>
-</section>
-<section class="segment-outer bg-violet">
-    <section class="segment-inner gallery-image__column py-8 xmed:pb-16">
-        {% for item in imagePanels %}
-            <figure class="inline-block mb-2 px-8 xmed:px-0">
-                <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
-            </figure>
-        {% endfor %}
     </section>
 </section>
 {{ subfooter() }}
