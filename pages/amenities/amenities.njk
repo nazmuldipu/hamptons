@@ -6,14 +6,17 @@ permalink: "build/amenities.html"
 permalinkBypassOutputDir: true
 ---
 
+{% from "macros.njk" import stylusHead, h2Head, rectLink, pictureImg %}
+
 <section class="bg-violet">
     <section class="segment-outer pt-16 xmed:pt-24 mb-16 pb-10 bg-violet">
         <section class="segment-inner px-4 pt-4 xmed:pt-16">
-            <figcaption>
-                <h2 class="text-5xl text-center pb-2 mb-1">
-                    A hidden gem for the <br>modern explorer</br>
-                </h2>
-            </figcaption>
+            {{
+                h2Head(
+                "A hidden gem for the modern explorer",
+                "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pb-8 mx-auto font-normal"
+                )
+            }}
             <figure class="max-w-hero-width mx-auto">
                 <picture>
                     <source src="images/amenities-1.webp" type="image/webp" srcset="
@@ -26,23 +29,16 @@ permalinkBypassOutputDir: true
                 ">
                 </picture>
             </figure>
+            
+            {{ stylusHead("enjoy the journey", "text-center text-4xl xmed:text-6.5xl") }}
+
+            <div class="grid justify-items-center pt-16">
+                <img src="/images/down_arrow.svg" alt="Down Arrow" />
+            </div>
+
+            {{ h2Head(" Our special aminities", "xmed:text-4.5xl xmed:mt-24 font-semibold") }}
             <article class="max-w-2xl m-auto">
-                <header>
-                    <h1 class="font-hijrnotes text-6xl text-center">
-                        enjoy the journey
-                    </h1>
-                </header>
-                <div class="xmed:hidden flex justify-center my-16">
-                    <img src="/images/amenities-1.svg">
-                </div>
-            </article>
-            <article class="max-w-2xl m-auto">
-                <header>
-                    <h4 class="xmed:hidden text-center text-2xl">
-                        Our special aminities
-                    </h4>
-                </header>
-                <p class="text-center pt-4">
+                 <p class="text-center pt-4">
                     Sometimes all you need is to escape from the city, enjoy the nature, absorve the sun, and feel the sea breeze.We offer a variety of amenities to enhance your stay.
                 </p>
             </article>
@@ -50,14 +46,15 @@ permalinkBypassOutputDir: true
     </section>
 
     {% for item in imagePanels %}
-        <section class="segment-outer segment-outer__image-panel">
-            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center {{ item.backgroundColor }}">
+        <section class="segment-outer segment-outer__image-panel {{ item.backgroundColor }}">
+            <section class="segment-inner xmed:grid grid-cols-2 gap-x-16 xmed:py-16 items-center {{ item.innerClass }}">
+
                 <figure class="xmed:justify-end {{ item.figureOrder }}">
                     <picture>
                         <source src="{{ item.imageUrl }}.webp" type="image/webp" srcset="
-                    {{ item.imageUrl }}.webp 600w,
-                    {{ item.imageUrl }}_300.webp 300w
-                ">
+                            {{ item.imageUrl }}.webp 600w,
+                            {{ item.imageUrl }}_300.webp 300w
+                        ">
                         <img class="w-full" src="{{ item.imageUrl }}.jpg" class="inline-block" alt="the lawn">
                     </picture>
                 </figure>
@@ -72,14 +69,25 @@ permalinkBypassOutputDir: true
     {% endfor %}
 </section>
 
-<section class="segement-outer">
-    <section class="segment-inner">
-        <article class="text-center mb-8 mt-16">
-            <header class="font-hijrnotes text-6xl mb-6">
-                <h1>something special for you</h1>
-            </header>
-            <p class="mb-6">Click below to view available offers</p>
-            <a href="#" class="font-serif italic border inline px-6 py-2">View Offers</a>
-        </article>
-    </section>
+<!-- Special offers -->
+<section class="mx-auto py-20 bg-vio-2">
+  {{
+    stylusHead(
+      "something special for you",
+      "text-center text-4xl xmed:text-6.5xl"
+    )
+  }}
+
+  <p class="text-base xmed:text-2xl py-8 text-center">
+    Click below to view available offers
+  </p>
+
+  {{
+    rectLink(
+      "View Offers",
+      "/offers.html",
+      "text-center block my-5",
+      "px-10 py-2 italic font-semibold border border-black text-base"
+    )
+  }}
 </section>

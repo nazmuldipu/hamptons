@@ -1,17 +1,17 @@
 /****  start imports  ********************************/
 @import "../../styles/global.css";
 /****  end imports  ********************************/
-.home-dialog {
-  font-family: Hijrnotes;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 30px;
-  padding: 3px 25px;
-  text-align: center;
-  letter-spacing: -0.03em;
-  color: #1b3a5c;
-}
 
-.home-dialog.small {
-  font-size: 24px;
+@layer base {
+    .amenities-carousel{
+        @apply absolute;
+        @apply overflow-hidden;
+        @apply h-amenities;
+        @apply xmed:h-xmed-amenities;
+    }
+    .amenities-carousel__child{
+        @apply overflow-hidden;
+        @apply h-amenities;
+        @apply xmed:h-xmed-amenities;
+    }
 }

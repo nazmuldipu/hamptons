@@ -1,34 +1,37 @@
 {
     "imagePanels": [
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "bg-jou-main-3",
+            "innerClass": "",
             "imageUrl": "images/amenities-2",
             "imageAlt": "The pool",
             "figureOrder": "order-1",
             "figcaptionOrder": "order-2",
-            "title": "The pool",
+            "title": "the pool",
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-grey",
+            "backgroundColor": "",
+            "innerClass": "mt-14 bg-grey xmed:bg-violet",
             "imageUrl": "images/amenities-3",
             "imageAlt": "The lawn",
             "figureOrder": "order-2",
             "figcaptionOrder": "order-1",
-            "title": "The lawn",
+            "title": "the great lawn",
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "bg-jou-main-3",
             "imageUrl": "images/amenities-4",
             "imageAlt": "The bikes",
             "figureOrder": "order-1",
             "figcaptionOrder": "order-2",
-            "title": "The bikes",
+            "title": "the bikes",
             "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
         },
         {
-            "backgroundColor": "bg-vio-1",
+            "backgroundColor": "",
+            "innerClass": "mt-14 bg-grey xmed:bg-violet",
             "imageUrl": "images/amenities-5",
             "imageAlt": "The lobby",
             "figureOrder": "order-2",

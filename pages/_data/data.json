@@ -47,12 +47,21 @@
       "footer": true
     }
   ],
-  "phone": "123-456-7890",
+  "phone": "(631) 324-4550",
   "email": "stay@journeyeasthampton.com",
   "address": "90 Pantigo Road, East Hampton, NY 11937",
   "social_media": [
-    { "name": "facebook", "href": "https://www.facebook.com/JourneyEastHampton/" },
-    { "name": "tripadvisor", "href": "https://www.tripadvisor.com/Hotel_Review-g47629-d13991602-Reviews-Journey_East_Hampton-East_Hampton_Long_Island_New_York.html?m=19905" },
-    { "name": "instagram", "href": "https://www.instagram.com/journeyeasthampton/" }
+    {
+      "name": "facebook",
+      "href": "https://www.facebook.com/JourneyEastHampton/"
+    },
+    {
+      "name": "tripadvisor",
+      "href": "https://www.tripadvisor.com/Hotel_Review-g47629-d13991602-Reviews-Journey_East_Hampton-East_Hampton_Long_Island_New_York.html?m=19905"
+    },
+    {
+      "name": "instagram",
+      "href": "https://www.instagram.com/journeyeasthampton/"
+    }
   ]
 }
