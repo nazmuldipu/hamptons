@@ -106,7 +106,7 @@ body {
   width: 101px;
   @apply rounded-full;
   @apply fixed;
-  @apply top-3/4;
+  @apply bottom-3.5;
   @apply right-3.5;
   @apply block;
 }
@@ -137,6 +137,7 @@ body {
 
   .reserve-btn {
     @apply top-5;
+    @apply bottom-auto;
     @apply right-16;
   }
 }
