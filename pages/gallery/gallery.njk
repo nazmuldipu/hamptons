@@ -26,7 +26,7 @@ subfooter %}
 
 <section class="segment-outer">
     <section class="segment-inner">
-        <section class="max-w-xs mx-auto">
+        <section class="text-center">
             {% set border = 'border-b-1 border-jou-main-2' %}
             <input type="radio" id="tab--1" class="tab--1 tab__radio" name="tab__radio" checked>
             <label for="tab--1" class="{{ border }} tab__label">All</label>
@@ -40,21 +40,21 @@ subfooter %}
             <input type="radio" id="tab--4" class="tab--4 tab__radio" name="tab__radio">
             <label for="tab--4" class="tab__label">Hamptons</label>
             
-            <div class="hidden tab__containers">
-                <section class="all">
+            <div class="tab__containers">
+                <section class="hidden all">
                     {% for item in imagePanels %}
                         <figure class="inline-block mb-2 px-8 xmed:px-0">
                             <img src="{{ item.imageUrl }}.webp" class="w-full" alt="the lawn" >
                         </figure>
                     {% endfor %}
                 </section>
-                <section class="rooms">
+                <section class="hidden rooms">
                     2222222
                 </section>
-                <section class="hamptons">
+                <section class="hidden hamptons">
                     333333333
                 </section>
-                <section class="hotel">
+                <section class="hidden hotel">
                     44444444444
                 </section>
             </div>
