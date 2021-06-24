@@ -6,19 +6,7 @@ permalink: "build/rooms.html"
 permalinkBypassOutputDir: true
 ---
 {% from "macroSvgs.njk" import leftArrow, rightArrow, star %}
-
-<!-- Content Stylus Head -->
-{% macro stylusHead(text, childClass="text-left") %}
-<div class="py-3">
-  <div
-    class="font-hijrnotes font-normal not-italic leading-8 py-1 px-6 text-center text-jou-main-1 tracking-tighter text-4xl {{
-      childClass
-    }}"
-  >
-    {{ text }}
-  </div>
-</div>
-{% endmacro %}
+{% from "macros.njk" import stylusHead, rectLink, subheader, pictureImg, hijrnotesSubheader, articleSubheader, subfooter %}
 
 <!-- Content Head macro -->
 {% macro h2Head(text, childClass) %}
@@ -29,47 +17,9 @@ permalinkBypassOutputDir: true
 </div>
 {% endmacro %}
 
-<!-- Reacangle Link -->
-{% macro rectLink(text, link, parentClass, childClass) %}
-<div class="{{ parentClass }}">
-  <a class="{{ childClass }}" href="{{ link }}">{{ text }}</a>
-</div>
-{% endmacro %}
+{{ subheader( 'Your boutique home away from home', 'rooms', '', 'png' ) }}
+{{ hijrnotesSubheader('feels like home', 'true') }}
 
-<!-- Picture macro -->
-{% macro pictureImg(name, parentClass, childClass)%}
-<picture class="{{ parentClass }}">
-  <source
-    src="images/{{ name }}.webp"
-    type="image/webp"
-    srcset="images/{{name}}.webp 900w, images/{{name}}_640.webp 640w"
-  />
-  <img
-    src="images/{{ name }}.png"
-    class="{{ childClass }}"
-    alt="{{ name }}"
-    srcset="images/{{name}}.png 900w, images/{{name}}.png 640w"
-  />
-</picture>
-{% endmacro %}
-
-<!-- top banner -->
-<section class="mx-auto pt-16 xmed:pt-24 pb-9 bg-violet">
-  {{
-    h2Head(
-      " Your boutique home away from home",
-      "xmed:text-5xl max-w-xs xmed:max-w-xl py-5 xmed:pt-20 xmed:pb-8 mx-auto font-normal"
-    )
-  }}
-
-  {{ pictureImg("rooms", "max-w-hero-width", "mx-auto max-w-3xl") }}
-
-  {{ stylusHead("feels like home", "text-center  xmed:text-6.5xl") }}
-
-  <div class="grid justify-items-center pt-16">
-    <img src="/images/down_arrow.svg" alt="Down Arrow" />
-  </div>
-</section>
 
 <section
   class="mx-auto pt-5 xmed:pt-6 px-7 xmed:px-36 lg:px-60 pb-10 bg-violet"
@@ -79,7 +29,7 @@ permalinkBypassOutputDir: true
       {{ h2Head("Our rooms feature:", "font-semibold") }}
     </div>
     <div class="hidden xmed:block">
-      {{ pictureImg("v-bed", "max-w-hero-width", "w-full") }}
+      {{ pictureImg("v-bed", "mx-auto max-w-md", "w-full") }}
     </div>
     <div class="xmed:pl-12">
       {% for feature in features %}
@@ -103,10 +53,10 @@ permalinkBypassOutputDir: true
 </section>
 
 <section
-  class="mx-auto pt-9 xmed:pt-6 px-0 xmed:px-36 lg:px-60 pb-10 bg-violet"
+  class="mx-auto pt-9 xmed:pt-24 px-0 xmed:px-36 lg:px-60 pb-10 bg-violet"
 >
   {{ h2Head("Our cozy rooms", "xmed:text-4.5xl  font-semibold") }}
-  <div class="text-center text-2xl pt-4 pb-3 xmed:pb-16 px-4">
+  <div class="text-center text-2xl pt-4 pb-16 px-4 xmed:max-w-2xl xmed:mx-auto">
     A perfect balance of charm and luxury. Enjoy our collection of elegant rooms
     filled with comfort and contemporary style.
   </div>
@@ -118,7 +68,7 @@ permalinkBypassOutputDir: true
         {% for image in room.images %}
         <div class="absolute inset-0">
           <div class= "{{room.tag }}-carousel">
-            {{ pictureImg(image, "h-full","w-full h-4/5 xmed:h-5/6 object-scale-down" ) }}
+            {{ pictureImg(image, "h-full","w-full h-amenities xmed:h-xmed-room-images object-cover" ) }}
           </div>
         </div>
         {% endfor %}

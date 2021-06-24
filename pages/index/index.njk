@@ -32,7 +32,7 @@ permalinkBypassOutputDir: true
 <section class="mx-auto pt-9 xmed:pt-6 pb-10 bg-violet">
   {{ h2Head("About the Journey", "xmed:text-4.5xl font-semibold") }}
 
-  <div class="xmed:max-w-4xl text-center text-base px-4 py-5 xmed:mx-auto">
+  <div class="xmed:max-w-4xl text-center text-base xmed:text-2xl px-4 py-5 xmed:mx-auto">
     22 newly renovated hotel rooms, <br class="sm:hidden" />
     3 spacious and secluded cottages, a heated <br class="sm:hidden" />
     saltwater pool with indoor lounge, and only a <br class="sm:hidden" />
@@ -47,6 +47,8 @@ permalinkBypassOutputDir: true
       grid grid-cols-2
       xmed:grid-cols-3
       place-content-center
+      mb-6
+      xmed:mb-14
     "
   >
     {% set items = [ 2, 3, 4, 5, 6, 7 ] %}
@@ -69,113 +71,99 @@ permalinkBypassOutputDir: true
       "Location",
       "/hamptons.html",
       "text-center block my-5",
-      "px-10 py-2 italic font-semibold border border-black text-base"
+      "px-8 py-2 italic font-semibold border border-black text-base"
     )
   }}
 </section>
 
 <!-- Room info -->
 <section class="px-5 py-10 xmed:pt-12 bg-vio-2">
-  <div class="max-w-5xl mx-auto grid grid-cols-1 xmed:grid-cols-2">
     {# {{ pictureImg("homepage-8", "", "w-full") }} #}
-
-    <div class="overflow-hidden relative min-h-15.5h">
-      {{
-        pictureImg(
-          "room1",
-          "absolute inset-0",
-          "room-carousel"
-        )
-      }}
-      {{
-        pictureImg(
-          "room2",
-          "absolute inset-0",
-          "room-carousel"
-        )
-      }}
-      {{
-        pictureImg(
-          "room3",
-          "absolute inset-0",
-          "room-carousel"
-        )
-      }}
-      {{
-        pictureImg(
-          "room4",
-          "absolute inset-0",
-          "room-carousel"
-        )
-      }}
-      {{
-        pictureImg(
-          "room5",
-          "absolute inset-0",
-          "room-carousel"
-        )
-      }}
-    </div>
-    <div class="pl-0 xmed:pl-14">
-      <div
-        class="grid justify-items-center xmed:justify-items-start pt-10 pb-4"
-      >
-        <div>
-
-          <div class="px-2 inline-block cursor-pointer" id="room-carousel-prev">
-            {{ leftArrow("nav-arrow", true) }}
+    <div class="max-w-5xl mx-auto">
+    
+      <div class="overflow-hidden relative h-room-img">
+        {% for room in cozy_rooms %}
+          <div class="absolute inset-0">
+            <div class="room-carousel">
+                <div class="grid grid-cols-1 xmed:grid-cols-7">
+                  {{ pictureImg( room.images[0], "col-span-4", "w-full object-cover h-amenities xmed:h-room-img" ) }}
+                  <div class="col-span-3 pl-0 mt-10 xmed:pl-14 pt-16">
+                    {{ h2Head( room.title, "capitalize  xmed:text-4.5xl font-semibold xmed:text-left xmed:pt-14" ) }}
+                    <div class="text-center xmed:text-left text-base px-5x med:pl-0 py-3">
+                      Ideal for a romantic getaway or for a group of 4 that wants to
+                      experience the tranquility Journey East Hampton has to offer.
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-          <div class="px-2 inline-block cursor-pointer" id="room-carousel-next">
-            {{ rightArrow("nav-arrow", true) }}
+        {% endfor %}
+
+        {# Navitation buttons #}
+        <div class="absolute inset-0 top-72 xmed:top-0">
+          <div class="grid grid-cols-1 xmed:grid-cols-7 ">
+            <div class="col-span-4 hidden xmed:block"></div>
+            <div class="col-span-3 pl-0 xmed:pl-14">
+              <div class="grid justify-center xmed:justify-start content-start xmed:content-center grid-flow-col">
+                <div class="px-2 inline-block cursor-pointer" id="room-carousel-prev">
+                  {{ leftArrow("nav-arrow", true) }}
+                </div>
+                <div class="px-2 inline-block cursor-pointer" id="room-carousel-next">
+                  {{ rightArrow("nav-arrow", true) }}
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
-      </div>
-
-      {{
-        h2Head(
-          "Atlantic King Suite",
-          "xmed:text-4.5xl font-semibold xmed:text-left xmed:pt-8"
-        )
-      }}
-
-      <div
-        class="
-          text-center
-          xmed:text-left
-          text-base
-          px-5
-          xmed:pl-0
-          py-5
-          xmed:py-3
-        "
-      >
-        Ideal for a romantic getaway or for a group of 4 that wants to
-        experience the tranquility Journey East Hampton has to offer.
-      </div>
-
-      <div class="grid justify-items-center xmed:justify-items-start my-4">
-        <div>
-          {{
-            rectLink(
-              "View All Rooms",
-              "/rooms.html",
-              "text-center inline-block my-5",
-              "px-4 py-2 italic font-semibold border border-black text-base"
-            )
-          }}
-          {{
-            rectLink(
-              "View Offers",
-              "/offers.html",
-              "text-center inline-block my-5 mx-2",
-              "px-4 py-2 italic font-semibold border border-black text-base"
-            )
-          }}
+        <div class="hidden xmed:block absolute xmed:inset-0 xmed:top-80">
+          <div class="grid grid-cols-1 xmed:grid-cols-7">
+            <div class="col-span-4"></div>
+            <div class="col-span-3 pl-0 xmed:pl-14">
+              {{
+                rectLink(
+                  "View All Rooms",
+                  "/rooms.html",
+                  "text-center inline-block my-5",
+                  "px-4 py-2 italic font-semibold border border-black text-base"
+                )
+              }}
+              {{
+                rectLink(
+                  "View Offers",
+                  "/offers.html",
+                  "text-center inline-block my-5 mx-2",
+                  "px-4 py-2 italic font-semibold border border-black text-base"
+                )
+              }}
+            </div>
+          </div>
         </div>
-      </div>
+        
+      </div>    
     </div>
-  </div>
+    
+    <div class="grid grid-cols-1 xmed:hidden">          
+            <div class="pl-0 xmed:pl-14">
+              <div class="grid justify-between grid-flow-col px-4">
+                {{
+                  rectLink(
+                    "View All Rooms",
+                    "/rooms.html",
+                    "text-center inline-block my-5",
+                    "px-4 py-2 italic font-semibold border border-black text-base"
+                  )
+                }}
+                {{
+                  rectLink(
+                    "View Offers",
+                    "/offers.html",
+                    "text-center inline-block my-5 mx-2",
+                    "px-4 py-2 italic font-semibold border border-black text-base"
+                  )
+                }}
+              </div>
+            </div>
+          </div>
 </section>
 
 <!-- Amenities -->
@@ -242,9 +230,7 @@ permalinkBypassOutputDir: true
 <section class="px-4 py-10 xmed:pt-24 pb-9 bg-violet">
   {{ stylusHead("a hidden gem") }}
 
-  
-
-  <div class="overflow-hidden relative min-h-20h xmed:min-h-15.5h max-w-4xl mx-auto">
+  <div class="overflow-hidden relative min-h-22h xmed:min-h-17h max-w-4xl mx-auto mt-1 xmed:mt-12">
     {% for comment in comments %}
     <div class="absolute xmed:inset-x-12">
       <div
@@ -258,15 +244,15 @@ permalinkBypassOutputDir: true
           opacity-0
         "
       >
-        {{ h2Head(comment.title, "xmed:text-4.5xl font-semibold ") }}
+        {{ h2Head(comment.title, "text-2xl xmed:text-2xl font-semibold") }}
         
-        <div class="grid grid-cols-1 justify-items-center">
-          <div class="text-center text-base w-full xmed:max-w-3xl">
+        <div class="grid grid-cols-1 justify-items-center mt-2">
+          <div class="text-center text-base xmed:text-2xl w-full xmed:max-w-3xl xmed:font-semibold">
             {{comment.comments}}
           </div>
         </div>
 
-        <div class="text-center pt-8 pb-6">
+        <div class="text-center pt-8 xmed:pt-6 pb-6">
           <div class="grid justify-items-center">
             {% set stars = [1, 2, 3, 4, 5] %}
             <div>
@@ -277,13 +263,13 @@ permalinkBypassOutputDir: true
               {% endfor %}
             </div>
           </div>
-          <div>{{comment.name}} - {{comment.address}}</div>
+          <div class='text-sm xmed:text-base xmed:text-semibold'>{{comment.name}}, {{comment.address}}</div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
-  <div class="italic underline py-4 text-center">#1 hotel in East Hampton</div>
+  <div class="italic underline py-4 text-center text-base xmed:text-4.5xl font-normal">#1 hotel in East Hampton</div>
 
   <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-60 py-8">
     <span

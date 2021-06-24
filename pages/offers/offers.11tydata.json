@@ -3,26 +3,34 @@
         {
             "imageUrl": "images/offers-2",
             "imageAlt": "buy 3 get 4",
+            "href": "https://res.windsurfercrs.com/ibe/details.aspx?propertyid=15303&rate=BBDISC&nono=1&CheckIn=07/10/2018&_ga=2.106735555.1984472536.1624510276-1518451192.1624510276",
             "figureOrder": "order-1",
             "figcaptionOrder": "order-2",
-            "title": "buy 3 get 4",
-            "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
+            "title": "exclusive online savings",
+            "p1": "Start your Journey today by choosing our online discounted rate package! This promotional discounted package will apply to online bookings only. Hurry, rooms won’t last! ",
+            "p2": "Rooms include LED flat-screen TV, mini fridge, luxury amenities, grab & go breakfast, access to our heated saltwater pool, and a view of our serene garden.",
+            "p3": "Subject to blackout dates."
         },
         {
             "imageUrl": "images/offers-3",
             "imageAlt": "free fam rooms",
+            "href": "https://res.windsurfercrs.com/ibe/details.aspx?propertyid=15303&rate=BBSTA4&nono=1&_ga=2.40356194.1984472536.1624510276-1518451192.1624510276",
             "figureOrder": "order-1",
             "figcaptionOrder": "order-2",
-            "title": "free fam rooms",
-            "p1": "Friends of Journey stay for free."
+            "title": "stay more, save more package",
+            "p1": "Enjoy your Journey to the fullest! Plan your weekday getaway and stay four nights to receive 15% off our best available rates.",
+            "p2": "Rooms include LED flat-screen TV, mini fridge, luxury amenities, grab & go breakfast, access to our heated saltwater pool, and a view of our serene garden.",
+            "p3": "Subject to blackout dates."
         },
         {
             "imageUrl": "images/offers-4",
             "imageAlt": "buy 1 get 2",
+            "href": "https://res.windsurfercrs.com/ibe/details.aspx?nono=1&propertyid=15303&rate=BBAP10&_ga=2.38661347.1984472536.1624510276-1518451192.1624510276",
             "figureOrder": "order-1",
             "figcaptionOrder": "order-2",
-            "title": "buy 1 get 2",
-            "p1": "There is nothing like a refreshing dip in our heated saltwater pool, lounge under our shaded umbrellas, and cool off in our soothing pool house."
+            "title": "advance purchase",
+            "p1": "Planning your luxury experience in advance? Book your stay now, and you will receive a special rate! Journey is located close to Guild Hall, The East Hampton Library, Home Sweet Home museum, The Thomas Moran House, boutique shops, fine dining, beaches, wineries, hiking trails, farm stands, and right between the villages of Amagansett and East Hampton. Take a Journey with us and explore all the possibilities the Hamptons have to offer.",
+            "p2": "Rooms include LED flat-screen TV, mini fridge, luxury amenities, grab & go breakfast, access to our heated saltwater pool, and a view of our serene garden."
         }
     ]
 }

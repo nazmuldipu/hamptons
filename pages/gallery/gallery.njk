@@ -5,26 +5,18 @@ meta_title: "JOURNEY"
 permalink: "build/gallery.html"
 permalinkBypassOutputDir: true
 ---
-{% from "macros.njk" import
-subheader,
-hijrnotesSubheader,
-articleSubheader,
-subfooter %}
+{% from "macros.njk" import subheader, hijrnotesSubheader, articleSubheader, subfooter %}
+
 {{ subheader(
     'Gallery',
     'gallery-1',
     '',
     'png'
 ) }}
-{{ hijrnotesSubheader('welcome to the journey', 'true') }}
-{{ articleSubheader(
-    'Beautiful hampton gallery',
-    'The first inn located in America was recorded in the year 1607 and lead the way with many other firsts in the hospitality industry. The first publicly held hotel (the City Hotel) opened in New York in 1792. ', 
-    'max-w-2xl m-auto'
-    ) 
-}}
 
-<section class="segment-outer px-5 xmed:px-16">
+{{ hijrnotesSubheader('welcome to the journey', 'true') }}
+
+<section class="segment-outer px-8 xmed:px-16">
     <section class="segment-inner">
         {% macro gallery(array)%}
             {% for item in array %}
