@@ -242,9 +242,7 @@ permalinkBypassOutputDir: true
 <section class="px-4 py-10 xmed:pt-24 pb-9 bg-violet">
   {{ stylusHead("a hidden gem") }}
 
-  
-
-  <div class="overflow-hidden relative min-h-20h xmed:min-h-15.5h max-w-4xl mx-auto">
+  <div class="overflow-hidden relative min-h-22h xmed:min-h-17h max-w-4xl mx-auto mt-1 xmed:mt-12">
     {% for comment in comments %}
     <div class="absolute xmed:inset-x-12">
       <div
@@ -258,15 +256,15 @@ permalinkBypassOutputDir: true
           opacity-0
         "
       >
-        {{ h2Head(comment.title, "xmed:text-4.5xl font-semibold ") }}
+        {{ h2Head(comment.title, "text-2xl xmed:text-2xl font-semibold") }}
         
-        <div class="grid grid-cols-1 justify-items-center">
-          <div class="text-center text-base w-full xmed:max-w-3xl">
+        <div class="grid grid-cols-1 justify-items-center mt-2">
+          <div class="text-center text-base xmed:text-2xl w-full xmed:max-w-3xl xmed:font-semibold">
             {{comment.comments}}
           </div>
         </div>
 
-        <div class="text-center pt-8 pb-6">
+        <div class="text-center pt-8 xmed:pt-6 pb-6">
           <div class="grid justify-items-center">
             {% set stars = [1, 2, 3, 4, 5] %}
             <div>
@@ -277,13 +275,13 @@ permalinkBypassOutputDir: true
               {% endfor %}
             </div>
           </div>
-          <div>{{comment.name}} - {{comment.address}}</div>
+          <div class='text-sm xmed:text-base xmed:text-semibold'>{{comment.name}}, {{comment.address}}</div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
-  <div class="italic underline py-4 text-center">#1 hotel in East Hampton</div>
+  <div class="italic underline py-4 text-center text-base xmed:text-4.5xl font-normal">#1 hotel in East Hampton</div>
 
   <div class="grid grid-cols-2 px-10 xmed:px-24 xmed:-mt-60 py-8">
     <span
