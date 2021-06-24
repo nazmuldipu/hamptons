@@ -3,7 +3,7 @@ showLogo %}
 <header class="w-full h-15 xmed:h-25 fixed z-40 grid bg-white">
     {# follwoing checkbox changing the value :checked, css property written on global.css #}
     <input type="checkbox" id="menu-toggle" class="page-header__toggle hidden">
-    <nav class="nav-bar w-full segment-inner flex items-center justify-between xmed:justify-center px-5 xmed:px-16">
+    <nav class="nav-bar w-full segment-inner flex items-center justify-between xmed:justify-center px-8 xmed:px-16">
         <div class="">
             {% if data.nav_menu %}
                 {{menuItems('desktop-menu hidden xmed:flex', 'mx-2 lg:mx-4 mar-tablet:mx-6','text-base', data.nav_menu, pagename)}}
