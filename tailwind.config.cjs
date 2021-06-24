@@ -25,6 +25,7 @@ module.exports = {
         "jou-main-3": "#EEE5DC",
         "jou-main-4": "#D9D9D6",
         "jou-main": "#354656",
+        "jou-cyan": "#51cdcd",
         "nav-arrow": "#858585",
         white: "#fff",
         grey: "#D9D9D6",
